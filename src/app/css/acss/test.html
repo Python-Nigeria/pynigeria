@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Acss styling Test</title>
+	<link rel="stylesheet" type="text/css" href="./acss.css">
+</head>
+<style type="text/css">
+	.obj{
+		position:relative;
+		widh:200px;
+		padding:20px;
+		left:-50%;
+		animation:slide 5s linear 0s 1;
+		animation-fill-mode: forwards;
+	}
+
+	.fadeIn{
+		opacity: 0;
+		postion:relative;
+		animation: FadeIn 2s forwards;
+	}
+
+	.write{
+		width:0px;
+		overflow:hidden;
+		white-space: nowrap;
+		animation:Write 5s forwards ;
+	}
+
+	@keyframes Write{
+		from{
+			width:1px;
+			height: 0px;
+
+		}
+		to{
+			width:100%;
+			height:100%;
+		}
+	}
+
+	@keyframes Slide {
+		to {
+			transform: translate(0,0px);
+			background-color:var(--primary-color);
+			color:white;
+			left:0;
+		}
+	}
+	@keyframes FadeIn{
+		from{
+			opacity: 0;
+			transform: translateY(1em);
+		}
+		to{
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	}	
+</style>
+<body>
+	<div class="container center" style="position: relative;">
+<div class="ob"><span class="write">Ascss Styling Testing Page</span></div>
+</div>
+<span class="write inline-block color-p">What is your Name </span>
+</body>
+</html>

@@ -1,0 +1,220 @@
+body{
+padding:5px;
+font-family:arial;
+font-size:14px;
+margin:0;}
+
+.bold{
+font-weight:bold;}
+
+.header{
+position:relative;
+top:0;
+font-size:22px;}
+
+.header-center{
+position:relative;
+text-align:center;
+top:0;
+font-size:23px;}
+
+.fixed-header{
+font-size:23px;
+position:fixed;
+top:0;
+padding:2px;
+z-index:10;}
+
+.fixed-header-center{
+font-size:23px;
+text-align:center;
+position:fixed;
+top:0;
+padding:2px;
+z-index:10;}
+
+.fixed{
+background-color:white;
+width:500px;
+top:0;
+padding:10px;
+z-index:10;
+position:fixed;}
+
+.content{
+z-index:5;
+margin-top:55px;}
+
+.container{
+padding:4px;
+border:2px ridge;}
+
+
+button[name=submit-long]{
+width:100%;}
+
+button[name='submit-long-curve']{
+width:100%;
+border-radius:7px;}
+
+.container-solid{
+padding:4px;
+border:2px solid;}
+
+
+button[name='submit-short-curve']{
+border-radius:7px;}
+
+a[name='no-line']{
+text-decoration:none;}
+
+input[name=curvebox]{
+border-radius:7px;
+box-shadow:1px 1px 1px 1px #0000;}
+
+input[name=curvebox-long]{
+border-radius:7px;
+width:100%;
+box-shadow:1px 1px 1px 1px #0000;}
+
+.subject{
+font-weight:bold;}
+
+.cage{
+padding:5px;
+background-color:#d8d8d8;}
+
+.box{
+margin:5px;
+padding:5px;
+border-radius:12px;
+box-shadow:0 0px 8px #d8d8d8;}
+
+flex-wrap{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;}
+
+.flex-flow{
+display:flex;
+flex-direction:row;
+overflow:scroll;}
+
+
+.dropbtn {
+position:abaolute;
+top:0;
+background-color:white;
+color: white;
+padding: 5px;
+font-size: 16px;
+border: none;}
+
+.dropdown {
+top:0;
+position:relative;
+margin-left:0;
+display: inline-block;}
+
+.dropdown-content {
+margin-top:0;
+font-size:14px;
+display: none;
+position: absolute;
+background-color: white;
+width:5cm;
+left:0;
+right:0;
+height:100cm;
+padding: 12px 16px;
+line-height:15mm;
+z-index: 1;}
+
+.dropdown-content a {
+color: black;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: 5cb3ff;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover.dropbtn {background-color: grey;}
+
+.circle{
+border-radius:50px;}
+
+.left{
+brder:1px solid black;
+border-radius:50%;
+position:absolute;
+float:right;
+right:20px;
+top:0;
+padding:5px;}
+
+.bottom-side{
+font-size:35px;
+border-radius:50px;
+border:2px solid white;
+padding:5px;
+position:fixed;
+bottom:40px;
+float:right;
+right:20px;
+background-color:white;
+color: 5cb3ff;
+box-shadow:0 0px 8px #d8d8d8;
+}
+
+.head{
+font-size:16px;
+color:5cb3ff;
+background-color:5cb3ff;
+color:white;
+padding:5px;
+border-radius:5px;
+margin-top:0;
+position:fixed;
+}
+
+
+button.input{
+background-color:black;
+border:none;
+color:white;
+height:1cm;
+border-radius:7px;}
+
+b.like{
+
+
+}
+
+
+.heart {
+  border-color: blue;
+}
+
+input[type=text]{
+border-radius:5px;
+border:2px solid #5cb3ff;
+height:1cm;
+width:100%;
+}
+input[type=password]{
+border-radius:5px;
+border:2px solid #5cb3ff;
+height:1cm;
+width:100%;
+}
+}
+
+.helptext{
+font-size:8px;
+
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}

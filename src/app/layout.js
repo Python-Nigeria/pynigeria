@@ -1,4 +1,7 @@
 import { Inter } from "next/font/google";
+import "./css/acss/acss.css";
+import "./css/bootstrap-5/css/bootstrap.css";
+import "./css/fontawesome/css/all.min.css";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="font-opensans">{children}</body>
     </html>
   );
 }

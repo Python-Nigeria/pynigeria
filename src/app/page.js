@@ -1,95 +1,131 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import logo from "./logo.svg";
+import people from "./people.JPG";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div class="sz-14">
+      <nav class="container-fluid sz-14 display-sm-none sticky-top color-bg-p color-white" style={{zIndex:'20'}}>
+        <div class="row">
+          <div class="col-8 color-white font-poppins p-4 ">
+            <i class="fab fa-python"></i> Python Nigeria 
+          </div>
+          <div class="col font-poppins p-4 right "> 
+            membership 
+          </div>
+          <div class="col font-poppins p-4 right">
+            about us
+          </div>
         </div>
-      </div>
+      </nav>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <nav class="container-fluid display-md-none color-bg-p sticky-top" style={{margi:'0'}} >
+        <div class="row color-bg-p sz-16 color-white p-2 py-4 align-items-center">
+          <div class="col bold">
+            <i class="fab fa-python p-1 rounded color-s sz-18"></i> Python Nigeria
+          </div>
+          <div class="col right">
+            <i class="fas fa-bars sz-24"></i>
+          </div>
+        </div>
+      </nav>
+        
+      <section class="container-fluid color-bg-t py-1 my-md-0">
+        <div class="row vh-100 justify-content-center align-items-center cente">
+          <div class="col-md col-sm-12 color-p sz-30  sz-md-48" style={{marginTop:'-90px'}}>
+            <div class="row borde p-3 px-md-5 mx-md-5">
+              <div class="col-12" >
+                Welcome to the <br /> <b> Python Community </b>
+              </div>
+              <div class="sz-16 sz-md-20 col-12 pt-3">
+                A space for python enthusiasts to share knowledge, tackle projects together and advance in various fields.
+              </div>
+              <div class="col">
+                <button class="button bg-warning color-black rounded-4 col-6 col-md-5 col-sm-10 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover">
+                  become a member
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md col-sm-12 center display-sm-noe d-none d-md-block color-bg-t center" style={{marginTop:'-50px'}}>
+            <div class="row">
+              <div class="col">
+                <Image class="img-fluid cover col-10" src={logo}  style={{height:'350px',width:'auto'}} ></Image>
+              </div> 
+            </div>
+          </div>
+          <div class="col-md col-sm-12 center display-md-none d-md-none">
+            <div class="row" >
+              <div class="col" >
+                <Image class="img-fluid cover col-10" src={logo}  style={{height:'250px',width:'auto',marginTop:'-150px'}} ></Image>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <section class="container-fluid p-4 color-bg-p color-white">
+        <div class="row vh-md-100 justify-content-center align-items-center">
+          <div style={{}}>
+          <div class="row my-5">
+            <div class="col sz-24 color-white sz-md-36 center"> <span class="border-bottom border-5"> About us </span> </div>
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+          <div class="row sz-18 sz-md-24 my-5">
+          <div class="col center">
+            Our whatsapp Python community is a vibrant group of developers and enthusiasts  dedicated to exploring the latest in Python programming languageWhether you are an expert or a newbie, you will find a supportive environment to grow and collaborate
+          </div>
+          </div>
+          
+          <br />
+          <div class="row justify-content-center m-2 my-5">
+            <div class="col-md-3 col-sm-12 rounded center p-4 sz-18 m-2 color-bg-s color-white"> Web Development </div>
+            <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-s color-white"> Data Science & Analysis </div>
+            <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-s color-white"> Machine Learning </div>
+            <div class="col-md-3  col-sm-2 rounded center p-4 sz-18 m-2 color-bg-s color-white"> Job Updates </div>
+            <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-s color-white"> Learning </div>
+          </div>
+          </div>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        </section>
+
+        
+
+        <section class='container-fluid'>
+        <div class="row vh-md-100 background bg-light justify-content-center align-items-center p-5" style={{backgroundSize:'cover',backgroundPosition:'center'}}>
+        <div style={{maginTop:'-100px'}}>
+          <div class="col-12 sz-24 sz-md-36 color-p">
+           Join us on
+          </div>
+          <div class="col sz-18 sz-md-24">
+
+          <div class="row">
+            <div class="col-12 p-3"> <i class="fab fa-whatsapp p-2 color-s"></i> Whatsapp </div>
+            <div class="col-12 p-3"> <i class="fab fa-telegram p-2 color-s"></i>  Telegram </div>
+            <div class="col-12 p-3"><i class="fab fa-discord p-2 color-s"></i>  Discord </div>
+          </div>
+          <div class="row">
+            <div class="col"> Stay updated with the latest Python topics and connect with fellow Python enthusiasts </div>
+          </div>
+
+          </div>
+        </div>
+        </div>
+        </section>
+
+        
+
+        <section class="container-fluid hide">
+        <div class="row py-2">
+          <div class="col sz-14 color- justify-content-center center"> Python Nigeria 2024 </div>
+          </div>
+        </section>
+
+    </div>
+   
   );
 }
