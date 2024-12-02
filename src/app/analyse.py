@@ -270,6 +270,10 @@ def parse_line_to_dict(line):
         'added',
         'changed',
         'removed',
+        'requested',
+        'Membersinthisgrouparenowcommunitymembers',
+        'Anyoneinthecommunity',
+        'Newmembersneedadminapprovaltojointhisgroup.Taptochange.'
     ]
     
     if not line or any(skip in line for skip in skip_patterns):
@@ -300,7 +304,7 @@ def parse_line_to_dict(line):
 
 # Step 1: Read messages from text file
 messages = []
-with open("whatsapp.txt", 'r', encoding='utf-8') as file:
+with open("whatsaapp2.txt", 'r', encoding='utf-8') as file:
     for line in file:
         # Parse each line into a message dictionary (modify according to your data structure)
         message = parse_line_to_dict(line)
@@ -313,6 +317,6 @@ with open("whatsapp.txt", 'r', encoding='utf-8') as file:
 analysis_result = get_user_stats(messages)
 
 # Step 3: Write the analysis result to a JSON file
-with open('userStat.json', 'w') as f:
+with open('userStat2.json', 'w') as f:
     json.dump(analysis_result, f, indent=4)  # Use `json.dump` for writing
 
