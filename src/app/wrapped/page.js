@@ -24,8 +24,8 @@ export default function Main(){
 	return(
 			<div class="container">
 				<div class="row sz-24">
-					<div class="col-sm col-md center p-2"> <div class="rounded  p-5 color-bg-t shdow-md d-flex align-items-center bold justify-content-center cursor-pointer" onClick={()=>setShow(1)} style={{height:"250px"}}> <i class="fas fa-users color-p mx-2"></i> Community Wrap </div> </div>
-					<div class="col-sm col-md center p-2" > <div class="rounded  p-5 bg-light d-flex align-items-center bold justify-content-center" onClick={()=>setShow(2)} style={{height:"250px"}}> <i class="fas fa-user color-p mx-2"></i> My Wrap </div> </div>
+					<div class="col-sm col-md center p-2"> <div class="rounded  p-5 color-bg-t shdow-md d-flex align-items-center bold justify-content-center cursor-pointer color-s-hover" onClick={()=>setShow(1)} style={{height:"250px",cursor:"pointer"}}> <i class="fas fa-users  mx-2"></i> Community Wrap </div> </div>
+					<div class="col-sm col-md center p-2" > <div class="rounded  p-5  d-flex align-items-center bold justify-content-center color-s-hover bg-light" onClick={()=>setShow(2)} style={{height:"250px",cursor:"pointer"}}> <i class="fas fa-user mx-2"></i> My Wrap </div> </div>
 				</div>
 				
 			</div>
@@ -34,18 +34,28 @@ export default function Main(){
 }
 }
 
+const formatNumber = (number)=>{
+	let propose = "0706943651"
+	if(number.charAt(0) === "0"){
+		let n = number.slice(1,50) //706943651
+		let update = "+234" + number.slice(1,50) 
+		return update
+	}
+	return number
+}
+
 function InputWrapp(){
 	const [show, setShow] = React.useState()
 	const nameRef = React.useRef()
 
 	if (show){
-		return (<><IndividualWrap name={nameRef.current.value} /> </>)
+		return (<><IndividualWrap name={formatNumber(nameRef.current.value)} /> </>)
 	}
 	return(
-			<div class="rounded justify-content-center py-5 color-bg-t center">
+			<div class="rounded justify-content-center py-5 center">
 				<div class='row sz-20'>
 					<div class="col  ">
-						Enter your Whatsapp No: <input ref={nameRef} class='form-contro no-border border-bottom color-bg-t col-9 py-3' />
+					 <input ref={nameRef} class='no-border border-bottom bg-light input-hover col-md-7 col-12 py-4 my-4 sz-20 center' placeholder="Enter your Whatsapp Nmber" />
 					</div>
 				</div>
 
@@ -53,7 +63,7 @@ function InputWrapp(){
 
 				<div class="row sz-20 my-4">
 					<div class="col">
-						<button class="bg-success color-white rounded no-border col-4 p-2" onClick={()=>setShow(true)}> Get Wrapped </button>
+						<button class="bg-danger color-white rounded no-border col-4 p-2" onClick={()=>setShow(true)}> Get Wrapped </button>
 					</div>
 				</div>
 
@@ -86,7 +96,10 @@ function Wrapped(){
 	return(
 		<div class="container">
 		<div class="d-flex justify-content-center flex-column">
-			<div class="row sz-20 bg-warning  p-5 rounded center">
+			<div class="row sz-20 bg-warning px-3 p-5 rounded center">
+				<div class="col bold"> Total Members </div>
+				<div class="col"> 1670 </div>
+				<div class="w-100"></div>
 				<div class="col bold"> Total Messages </div>
 				<div class="col"> {data.total_messages} </div>
 				<div class="w-100"></div>
@@ -114,17 +127,17 @@ function Wrapped(){
 			</div>
 
 			<br />
-			<div class="row my-4">
+			<div class="row my-4 hide d-none">
 				<div class="col bold sz-24 color-p center"> Most Active Date </div>
 			</div>
 
-			<div class="row sz-18">
+			<div class="row sz-18 hide d-none">
 			{messagesDate?.map((x)=>(<div class="col-12 py-2">{x}</div>))}
 			</div>
 
 			<br />
 			<div class="row my-4">
-				<div class="col bold sz-24 color-p"> Most Trending topic </div>
+				<div class="col bold sz-24 color-p">  </div>
 			</div>
 
 			<div class="row sz-24">
@@ -140,7 +153,7 @@ function Wrapped(){
 
 function IndividualWrap({name}){
 	const  data = userStat[name]
-	const colorClass = ["bg-warning","color-bg-s","bg-danger","bg-primary"]
+	const colorClass = ["bg-warning","bg-primary","color-bg-s","bg-danger","bg-light","color-bg-red","color-bg-purple"]
 	const [timer,setTimer] = React.useState(0)
 	const [change ,setChange] = React.useState(0)
 
@@ -155,8 +168,14 @@ function IndividualWrap({name}){
 	return ()=> clearInterval(time)
 	},[timer])
 
+	if(!data){
+		return(
+				<div class="alert alert-danger sz-18"> Data for this User is not found </div>
+			)
+	}
+
 	return(
-			<div class="container color-bg-p vh-100 position-fixed" style={{top:'0',zIndex:30,left:"0px",right:0}}>
+			<div class={"container color-bg-p vh-100 position-fixed "} style={{top:'0',zIndex:30,left:"0px",right:0}}>
 				
 				<div class="row">
 				<div class="col p-1 color-white">
@@ -177,7 +196,7 @@ function IndividualWrap({name}){
 				{change == 0 && <div class='row center  justify-content-center animate__animated animate__fadeIn'>
 				<div class={"col-6 rounded-4 py-5 bg-warning"}>
 					<div class="col-12 color-black sz-24">
-						Total Messages <i class="fas fa-comment"></i>
+						 Total Messages <i class="fas fa-comment"></i> 
 					</div>
 					<div class="col sz-48 color-white">
 						{data.total_messages}
@@ -188,7 +207,7 @@ function IndividualWrap({name}){
 				{change == 1 && <div class='row center  justify-content-center animate__animated animate__fadeIn'>
 				<div class="col-6 rounded-4 py-5 bg-primary">
 					<div class="col-12 color-black sz-24">
-						Total Words <i class="fas fa-comment"></i>
+						 Total Words <i class="fas fa-pen"></i>
 					</div>
 					<div class="col sz-48 color-white">
 						{data.total_words}
@@ -199,7 +218,7 @@ function IndividualWrap({name}){
 				{change == 2 && <div class='row center  justify-content-center animate__animated animate__fadeIn'>
 				<div class="col-6 rounded-4 py-5 bg-light">
 					<div class="col-12 color-black sz-24">
-						Total Files <i class="fas fa-comment"></i>
+						Total Files <i class="fas fa-file"></i>
 					</div>
 					<div class="col sz-48 color-black">
 						{data.total_files}
@@ -208,9 +227,9 @@ function IndividualWrap({name}){
 				</div>}
 
 				{change == 3 && <div class='row center  justify-content-center animate__animated animate__fadeIn'>
-				<div class="col-6 rounded-4 py-5 bg-danger">
+				<div class="col-6 rounded-4 py-5 color-bg-red">
 					<div class="col-12 color-black sz-24">
-						Total Links <i class="fas fa-comment"></i>
+						Total Links <i class="fas fa-links"></i>
 					</div>
 					<div class="col sz-48 color-white">
 						{data.total_links}
@@ -219,21 +238,20 @@ function IndividualWrap({name}){
 				</div>}
 
 				{change == 4 && <div class='row center  justify-content-center animate__animated animate__fadeIn'>
-				<div class="col-6 rounded-4 py-5 bg-primary">
+				<div class="col-6 rounded-4 py-5 color-bg-purple">
 					<div class="col-12 color-black sz-24">
-						Day with most Messages <i class="fas fa-comment"></i>
+						Day with most Messages <i class="fas fa-calendar"></i>
 					</div>
 					<div class="col sz-48 color-white">
 							{Object.entries(data.days_with_more_messages)[0]}
 					</div>
 				</div>
 				</div>}
+				</div>
 
-
-
-
-
-
+				<div class="row color-silver position-absolute w-100 justify-content-center sz-18" style={{bottom:"25px"}}>
+					<div class="col p-3"><i class="fas fa-arrow-left" onClick={()=>{setChange((prev)=> prev == 0 ? 4 : prev - 1);setTimer(11)}} ></i>  </div>
+					<div class="col p-3 right"><i class="fas fa-arrow-right" onClick={()=>{setChange((prev)=> prev == 4 ? 0 : prev + 1);setTimer(11)}}></i> </div>
 				</div>
 			</div>
 		)

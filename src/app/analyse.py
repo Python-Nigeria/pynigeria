@@ -236,7 +236,8 @@ def get_user_stats(messages):
 
         # Calculate stats for each user
         for user in users:
-            user_stats[user] = {
+            stripuser = user.replace(" ","")
+            user_stats[stripuser] = {
                 'total_messages': get_total_messages(messages, user),
                 'total_words': get_total_words(messages, user),
                 'total_files': get_total_files(messages, user),
@@ -251,9 +252,6 @@ def get_user_stats(messages):
         return dict(user_stats)
     return
 
-
-import re
-from datetime import datetime
 
 def parse_line_to_dict(line):
     """
@@ -288,8 +286,10 @@ def parse_line_to_dict(line):
             message_date = datetime.strptime(date_str, '%d/%m/%y')  # Try the other format
         
         # Store parsed data into a dictionary
+
+        special = {'tensor': "+2349079755026",'the_gopher':"+2348118997115",'JB':"+234810842119",'ita mio':"+2347072944647",'Tech_princess':"+2349039842407","Lorenzo":"+2348134514639","Olotu Praise Jah":"+2347083023292","Rtr. Chukwuebuka":"+2348073194769","Dess":"+2347042507852","Ada-Ihueze":"+1(502)263-3522","CryptoKellz":"+2349027208946","Aaliyah":"+2349054253327","Vee":"+2348060755418","debugtitan":"+2349066526940","Horlar":"+2349034767600","Kemzzy":"+2349038306057","Temi":"+2348117612515","Ojogu":"+2349065011334","Danny":"+2347036630405","Tobias":"+2349037546885","Orden":"+2347046655760","Blue_Gate2.0":"+2347055673702","Nonso":"+2348134754827"}
         message_data = {
-            'sender': sender.strip(),
+            'sender': special[sender.strip()] if sender.strip() in  special.keys() else sender.strip(),
             'message': message.strip(),
             'date': message_date,
         }
