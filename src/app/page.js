@@ -2,23 +2,11 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import logo from "./logo.svg";
 import people from "./people.JPG";
+import Link from "next/link"
 
 export default function Home() {
   return (
     <div class="sz-14">
-      <nav class="container-fluid sz-14 display-sm-none sticky-top color-bg-p color-white" style={{zIndex:'20'}}>
-        <div class="row">
-          <div class="col-8 color-white font-poppins p-4 ">
-            <i class="fab fa-python"></i> Python Nigeria 
-          </div>
-          <div class="col font-poppins p-4 right "> 
-            membership 
-          </div>
-          <div class="col font-poppins p-4 right">
-            about us
-          </div>
-        </div>
-      </nav>
 
       <nav class="container-fluid display-md-none color-bg-p sticky-top" style={{margi:'0'}} >
         <div class="row color-bg-p sz-16 color-white p-2 py-4 align-items-center">
@@ -41,10 +29,14 @@ export default function Home() {
               <div class="sz-16 sz-md-20 col-12 pt-3">
                 A space for python enthusiasts to share knowledge, tackle projects together and advance in various fields.
               </div>
-              <div class="col">
-                <button class="button bg-warning color-black rounded-4 col-6 col-md-5 col-sm-10 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover">
+              <div class="col-12 pt-4">
+                <Link class="button bg-warning color-black rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration" href="/">
                   become a member
-                </button>
+                </Link>
+
+                <Link class="button bg-danger color-white rounded-4 mx-1 mx-md-1 col col-md-5  my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration" href="/wrapped">
+                  Check 2024 Wrapped
+                </Link>
               </div>
             </div>
           </div>
