@@ -31,6 +31,12 @@
 }
 
 @font-face {
+    font-family:LatoBold;
+    src:url('Lato-Bold.ttf')
+}
+
+
+@font-face {
     font-family:Apple;
     src:url('AppleRegular.otf')
 }
@@ -45,9 +51,67 @@
     src:url('OpenSans-Regular.ttf')
 }
 
+
+@font-face {
+    font-family:HelveticaBold;
+    src:url('HelveticaBold.ttf');
+}
+
+@font-face {
+    font-family:Slick;
+    src:url('slick.ttf');
+}
+
+@font-face {
+    font-family:FlexSlider;
+    src: url('flexslider.ttf');
+}
+
 @font-face {
     font-family:Adventor;
-    src:url('texgyreadventor-regular.otf')
+    src: url('adventor.otf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url("Montserrat-Bold.ttf");
+}
+
+.pointer-cursor{
+    cursor:pointer;
+}
+
+.font-adventor{
+    font-family: Adventor;
+}
+
+.font-montserrat{
+    font-family: Montserrat;
+}
+
+.font-montserrat-bold{
+    font-family: MontserratBold;
+}
+
+.font-lato-bold{
+    font-family: LatoBold;
+}
+
+.font-slick{
+    font-family: Slick;    
+}
+
+.font-helvetica-bold{
+    font-family: HelveticaBold;
+}
+
+.font-slider{
+    font-family: FlexSlider;
 }
 
 .color-p-hover:hover{
@@ -275,7 +339,7 @@ body{
 }
 
 .color-bg-brown {
-    color: brown;
+    background-color: brown;
 }
 
 .color-bg-silver {
@@ -283,7 +347,7 @@ body{
 }
 
 .color-bg-grey {
-    color: grey;
+    background-color: grey;
 }
 
 .color-p{
@@ -656,11 +720,11 @@ body{
 
 @media(max-width:600px) {
     .display-sm-none {
-        display: none;
+        display: none!important;
     }
 
     .display-sm-show {
-        display: block;
+        display: block!important;
     }
 
     .max-height-150 {

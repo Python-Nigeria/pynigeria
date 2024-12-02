@@ -1,14 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import logo from "./logo.svg";
-import people from "./people.JPG";
 import Link from "next/link"
 
 export default function Home() {
   return (
     <div class="sz-14">
 
-      <nav class="container-fluid display-md-none color-bg-p sticky-top" style={{margi:'0'}} >
+      <nav class="container-fluid d-none hide color-bg-p sticky-top" style={{margi:'0'}} >
         <div class="row color-bg-p sz-16 color-white p-2 py-4 align-items-center">
           <div class="col bold">
             <i class="fab fa-python p-1 rounded color-s sz-18"></i> Python Nigeria
@@ -30,13 +29,14 @@ export default function Home() {
                 A space for python enthusiasts to share knowledge, tackle projects together and advance in various fields.
               </div>
               <div class="col-12 pt-4">
+                <div class="row">
                 <Link class="button bg-warning color-black rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration" href="/">
-                  become a member
+                  Become a member
                 </Link>
-
                 <Link class="button bg-danger color-white rounded-4 mx-1 mx-md-1 col col-md-5  my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration" href="/wrapped">
-                  Check 2024 Wrapped
+                  2024 Wrapped
                 </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -88,7 +88,8 @@ export default function Home() {
         
 
         <section class='container-fluid'>
-        <div class="row vh-md-100 background bg-light justify-content-center align-items-center p-5" style={{backgroundSize:'cover',backgroundPosition:'center'}}>
+        <br />
+        <div class="row vh-md-100 background justify-content-center align-items-center p-3" style={{backgroundSize:'cover',backgroundPosition:'center'}}>
         <div style={{maginTop:'-100px'}}>
           <div class="col-12 sz-24 sz-md-36 color-p">
            Join us on

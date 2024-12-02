@@ -15,10 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-opensans">
+      <body className="font-montserrat">
         <nav class="container-fluid sz-14 sticky-top color-bg-p color-white" style={{zIndex:'20'}}>
         <div class="row">
-          <div class="col-8 color-white font-poppins p-4 ">
+          <div class="col-8 color-white p-4 ">
             <i class="fab fa-python"></i> Python Nigeria 
           </div>
           <div class="col font-poppins p-4 right display-sm-none"> 
