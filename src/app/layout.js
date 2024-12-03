@@ -8,7 +8,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Pyton Nigeria",
+  title: "Python Nigeria",
   description: "Python Nigeria Official Website",
 };
 
