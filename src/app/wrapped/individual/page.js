@@ -177,7 +177,7 @@ return ()=> clearInterval(time)
 				</div>
 				</div>
 
-				<div class="col-6 p-2 center">
+				<div class="col-6 center">
 					<div class="rounded-4 py-5 color-bg-s p-2">
 					<div class="row">
 					<div class="col-12 color-black sz-24">
@@ -190,7 +190,7 @@ return ()=> clearInterval(time)
 				</div>
 				</div>
 
-				<div class="col-6 center p-2">
+				<div class="col-6 center">
 					<div class="rounded-4 py-5 color-bg-red p-2">
 					<div class="row">
 					<div class="col-12 color-black sz-24">
