@@ -79,7 +79,7 @@ return ()=> clearInterval(time)
 				
 				<div class="row">
 				<div class="col p-1 color-white">
-				<div class={"rounded color-bg-p" +  style={{width:`${((timer/5) * 100)}%`,bottom:'40px',height:'3px'}}></div>
+				<div class="rounded color-bg-p"  style={{width:`${((timer/5) * 100)}%`,bottom:'40px',height:'3px'}}></div>
 				</div>
 				</div>
 
