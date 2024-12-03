@@ -79,7 +79,7 @@ return ()=> clearInterval(time)
 				
 				<div class="row">
 				<div class="col p-1 color-white">
-				<div class={"rounded " + colorClass[change]} style={{width:`${((timer/5) * 100)}%`,bottom:'40px',height:'3px'}}></div>
+				<div class={"rounded color-bg-p" +  style={{width:`${((timer/5) * 100)}%`,bottom:'40px',height:'3px'}}></div>
 				</div>
 				</div>
 
@@ -151,7 +151,7 @@ return ()=> clearInterval(time)
 
 				{
 					change == 5 && 
-					<div class='row animate__animated animate__fadeIn  justify-contents-center p-1'>
+					<div class='row animate__animated animate__fadeIn  justify-contents-center p-2'>
 						<div class="col-6 center">
 							<div class="rounded-4 py-5 p-2 bg-warning">
 									<div class="row">
