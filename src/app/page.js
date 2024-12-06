@@ -1,24 +1,21 @@
+"use client"
+import React from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import logo from "./logo.svg";
-import Link from "next/link"
+import Link from "next/link";
+import {animate,motion} from "motion/react";
+
 
 export default function Home() {
-  return (
-    <div class="sz-14">
 
-      <nav class="container-fluid d-none hide color-bg-p sticky-top" style={{margi:'0'}} >
-        <div class="row color-bg-p sz-16 color-white p-2 py-4 align-items-center">
-          <div class="col bold">
-            <i class="fab fa-python p-1 rounded color-s sz-18"></i> Python Nigeria
-          </div>
-          <div class="col right">
-            <i class="fas fa-bars sz-24"></i>
-          </div>
-        </div>
-      </nav>
-        
-      <section class="container-fluid color-bg-t py-1 my-md-0">
+  React.useEffect(()=>{
+    // animate("#hero",{opacity:0.5})
+  },[])
+
+  return (
+    <div class="sz-14">        
+      <motion.div id="hero" class="container-fluid color-bg-t py-1 my-md-0" animate={{scale:1}}>
         <div class="row vh-100 justify-content-center align-items-center cente">
           <div class="col-md col-sm-12 color-p sz-30  sz-md-48" style={{marginTop:'-90px'}}>
             <div class="row borde p-3 px-md-5 mx-md-5">
@@ -43,7 +40,7 @@ export default function Home() {
           <div class="col-md col-sm-12 center display-sm-noe d-none d-md-block color-bg-t center" style={{marginTop:'-50px'}}>
             <div class="row">
               <div class="col">
-                <Image class="img-fluid cover col-10" src={logo}  style={{height:'350px',width:'auto'}} ></Image>
+                <Image id="logo" class="img-fluid cover col-10 animate__animated animate__bounce" src={logo}  style={{height:'350px',width:'auto'}} ></Image>
               </div> 
             </div>
           </div>
@@ -55,7 +52,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.div>
 
         
 

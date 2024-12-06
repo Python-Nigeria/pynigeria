@@ -4,3 +4,7 @@
   --tertiary-color:#F0FFF0;
 
 }
+
+.ease{
+  transition: all 0.5s ease;
+}
