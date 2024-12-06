@@ -40,7 +40,7 @@ export default function Home() {
           <div class="col-md col-sm-12 center display-sm-noe d-none d-md-block color-bg-t center" style={{marginTop:'-50px'}}>
             <div class="row">
               <div class="col">
-                <Image id="logo" class="img-fluid cover col-10 animate__animated animate__bounce" src={logo}  style={{height:'350px',width:'auto'}} ></Image>
+                <img id="logo" class="img-fluid cover col-10 animate__animated animate__bounce" src="/logo.svg"  style={{height:'350px',width:'auto'}} ></img>
               </div> 
             </div>
           </div>
