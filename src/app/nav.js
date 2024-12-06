@@ -21,7 +21,7 @@ export default function Nav(){
 	},[])
 
 	return(
-		<nav class={`container-fluid sz-14 sticky-top ease-in-out color-bg-p ${isScrolled ? "color-bg-p color-white ease" : "color-black color-bg-t ease"} `} style={{zIndex:'20'}} >
+		<nav class={`container-fluid sz-14 sticky-top ease-in-out color-bg-p ${isScrolled ? "color-bg-p color-white ease" : "color-black ease"} `} style={{zIndex:'20'}} >
         <div class="row">
           <div class="col-8 p-4 ">
             <i class="fab fa-python"></i> Python Nigeria 
