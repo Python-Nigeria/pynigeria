@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 // import {postData} from '../../endpoints.js'
 import {useRouter} from 'next/navigation';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 // import {QuizBoxContext} from "../../components.js"
 import Link from "next/link"
 
@@ -60,8 +60,8 @@ export default function SignUp(props){
 	},[message])
 
 	React.useEffect(()=>{
-		Cookies.remove('token')
-		document.getElementById("nav").classList.add("d-none")
+		// Cookies.remove('token')
+		// document.getElementById("nav").classList.add("d-none")
 		// document.body.classList.add("color-bg-t")
 			// setLoader(false)
 	// return ()=>setLoader(true)

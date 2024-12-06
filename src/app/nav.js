@@ -5,6 +5,7 @@ import { useRouter ,useSearchParams,usePathname } from 'next/navigation'
 
 export default function Nav(){
 	const path = usePathname()
+	const excludedPath= ["/account/signup"]
 	const [isScrolled,setIsScrolled]= React.useState(false)
 	const {scrollY} = useScroll()
 	const animateClass = `${isScrolled ? "color-bg-p color-white" : "color-bg-t color-black"}`
@@ -22,6 +23,10 @@ export default function Nav(){
 
 		return ()=> window.removeEventListener('scroll',handleScroll)
 	},[])
+
+	if(excludedPath.includes(path)){
+		return(<></>)
+	}
 
 	return(
 		<nav id="nav" class={`container-fluid sz-14 sticky-top ${path === "/" ? animateClass : "color-bg-p color-white" } ease`} style={{zIndex:'20'}} >

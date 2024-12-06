@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import logo from "./logo.svg";
 import Link from "next/link";
 import {animate,motion} from "motion/react";
 
@@ -40,14 +39,14 @@ export default function Home() {
           <div class="col-md col-sm-12 center display-sm-noe d-none d-md-block color-bg-t center" style={{marginTop:'-50px'}}>
             <div class="row">
               <div class="col">
-                <img id="logo" class="img-fluid cover col-10 animate__animated animate__bounce" src="/logo.svg"  style={{height:'350px',width:'auto'}} ></img>
+                <img id="logo" class="img-fluid cover col-10" src="/logo.svg"  style={{height:'350px',width:'auto'}} ></img>
               </div> 
             </div>
           </div>
           <div class="col-md col-sm-12 center display-md-none d-md-none">
             <div class="row" >
               <div class="col" >
-                <Image class="img-fluid cover col-10" src={logo}  style={{height:'250px',width:'auto',marginTop:'-150px'}} ></Image>
+                <img class="img-fluid cover col-10" src="/logo.svg"  style={{height:'250px',width:'auto',marginTop:'-150px'}} ></img>
               </div> 
             </div>
           </div>
