@@ -10,14 +10,14 @@
 }
 
 .background{
-  background-image:url('/background.png') ;
+  background-image:url('/background.PNG') ;
   background-size:cover;
   background-position: center;
 }
 
 @media(max-width:900px){
   .background{
-    background-image:url('/background_small.png') ;
+    background-image:url('/background_small.PNG') ;
     background-position:center ;
     background-size:cover ;
     background-repeat: no-repeat;
