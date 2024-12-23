@@ -228,28 +228,32 @@ def get_days_with_more_messages(messages, user):
 
 # Main function to gather all stats for each user
 def get_user_stats(messages):
-    user_stats = defaultdict(dict)
-
+    # user_stats = defaultdict(dict)
+    stats =  []
     # Get all unique users
     if messages:
         users = set(message['sender'] for message in messages)
 
         # Calculate stats for each user
+        # for user in users:
+        #     stripuser = user.replace(" ","")
+        #     user_stats[stripuser] = {
+        #         'total_messages': get_total_messages(messages, user),
+        #         'total_words': get_total_words(messages, user),
+        #         'total_files': get_total_files(messages, user),
+        #         # 'total_emojis': get_total_emoji(messages, user),
+        #         'total_links': get_total_links(messages, user),
+        #         'messages_per_user': get_messages_per_user(messages).get(user, 0),
+        #         'messages_per_week': get_messages_per_week(messages, user),
+        #         'messages_per_month': get_messages_per_month(messages, user),
+        #         'days_with_more_messages': get_days_with_more_messages(messages, user),
+        #     }
+
         for user in users:
             stripuser = user.replace(" ","")
-            user_stats[stripuser] = {
-                'total_messages': get_total_messages(messages, user),
-                'total_words': get_total_words(messages, user),
-                'total_files': get_total_files(messages, user),
-                # 'total_emojis': get_total_emoji(messages, user),
-                'total_links': get_total_links(messages, user),
-                'messages_per_user': get_messages_per_user(messages).get(user, 0),
-                'messages_per_week': get_messages_per_week(messages, user),
-                'messages_per_month': get_messages_per_month(messages, user),
-                'days_with_more_messages': get_days_with_more_messages(messages, user),
-            }
-
-        return dict(user_stats)
+            stats.append(stripuser)
+        # return dict(user_stats)
+        return stats
     return
 
 
@@ -303,20 +307,22 @@ def parse_line_to_dict(line):
 
 
 # Step 1: Read messages from text file
-messages = []
-with open("whatsaapp2.txt", 'r', encoding='utf-8') as file:
-    for line in file:
-        # Parse each line into a message dictionary (modify according to your data structure)
-        message = parse_line_to_dict(line)
-        if message:  # Only append valid parsed messages
-            messages.append(message)
-        # messages.append(message)
+# messages = []
+# with open("whatsaapp2.txt", 'r', encoding='utf-8') as file:
+#     for line in file:
+#         # Parse each line into a message dictionary (modify according to your data structure)
+#         message = parse_line_to_dict(line)
+#         if message:  # Only append valid parsed messages
+#             messages.append(message)
+#         # messages.append(message)
 
 
-# Step 2: Analyze the WhatsApp data
-analysis_result = get_user_stats(messages)
-
-# Step 3: Write the analysis result to a JSON file
-with open('userStat2.json', 'w') as f:
-    json.dump(analysis_result, f, indent=4)  # Use `json.dump` for writing
+# # Step 2: Analyze the WhatsApp data
+# analysis_result = get_user_stats(messages)
+# previous = []
+# with open('members.json','r') as f:
+#     previous = json.load(f)
+# # Step 3: Write the analysis result to a JSON file
+# with open('members.json', 'w') as f:
+#     json.dump([*previous,*analysis_result], f, indent=4)  # Use `json.dump` for writing
 
