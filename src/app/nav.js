@@ -30,7 +30,7 @@ export default function Nav(){
 	}
 
 	return(
-		<nav id="nav" class={`container-fluid sz-14 sticky-top py-2 py-md-3 ${path === "/" ? animateClass : "color-bg-p color-white" } ease`} style={{zIndex:'20'}} >
+		<nav id="nav" class={`container-fluid sz-14 sticky-top py-2 py-md-3 ${path === "/" ? animateClass : "color-bg-white color-black shadow-sm" } ease`} style={{zIndex:'20'}} >
         <div class="row align-items-center">
           <div class="col-6 p-4 sz-16 bold">
             <i class="fab fa-python color-s"></i> Python Nigeria
