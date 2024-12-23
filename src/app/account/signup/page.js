@@ -68,11 +68,11 @@ export default function SignUp(props){
 },[])
 
 	return(
-		<div class="container">
-		<div class="row justify-content-center align-items-center vh-100">
-			<div class="col-md-4 col-sm rounded color-bg-white p-5">
+		<div class="container-fluid position-fixed vh-100 color-bg-white d-flex justify-content-center w-100">
+
+		<div class="col-sm col-md-4">
 				<div class="row mb-3">
-					<div class="col color-black sz-16 cente"> <img src="/logo.svg" class="p-2" style={{height:"25px"}} />Python Nigeria </div>
+					<div class="col color-black sz-16 "> <img src="/logo.svg" class="p-2" style={{height:"25px"}} />Python Nigeria </div>
 				</div>
 
 				<div class="row sz-14 mb-5">
@@ -114,7 +114,6 @@ export default function SignUp(props){
 				<div class="row border-top">
 				<div class="col center p-2 py3">
 				<Link href="/account/login" class="no-decoration sz-16 "> Log in </Link> 
-				</div>
 				</div>
 			</div>
 			</div>

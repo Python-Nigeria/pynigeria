@@ -65,9 +65,7 @@ function Footer(){
       </section>
       
 
-      <hr class="my-5" />
-
-      <section class="mb-3">
+      <section class="my-4 my-md-5 border-top pt-4">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8 sz-20">
             <p>
@@ -100,7 +98,7 @@ function Footer(){
       </section>
       </div>
     <div class="text-center">
-      © 2024 Copyright:
+      © 2024 Copyright
       <a class="color-s no-decoration mx-2" href="https://pynigeria.vercel.app/"
          >Python-Nigeria.com</a
         >
