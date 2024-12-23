@@ -127,7 +127,7 @@ export default function Home() {
         <div class="row">
           <div style={{}}>
           <div class="row my-5">
-            <div class="col sz-24 color-p sz-md-36 center"> <span class="border-5"> About Our Community </span> </div>
+            <div class="col sz-24 bold color-p sz-md-36 center"> <span class="border-5"> About Our Community </span> </div>
           </div>
 
           <div class="row sz-16 sz-md-18 my-5">
