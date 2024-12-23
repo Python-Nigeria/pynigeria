@@ -9,7 +9,7 @@ export default function Nav(){
 	const excludedPath= ["/account/signup"]
 	const [isScrolled,setIsScrolled]= React.useState(false)
 	const {scrollY} = useScroll()
-	const animateClass = `${isScrolled ? "color-bg-white color-black" : "color-bg-white color-black"}`
+	const animateClass = `${isScrolled ? "color-bg-white color-black shadow-sm" : "color-bg-white color-black"}`
 
 	React.useEffect(()=>{
 		const handleScroll = () =>{
