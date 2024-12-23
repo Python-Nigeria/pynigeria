@@ -41,7 +41,7 @@ export default function Nav(){
           </div>
           </div>
           <div class="col font-poppins p-4 right display-sm-none"> 
-            Dashboard 
+            <Link href="/membership" class="no-decoration"> Membership </Link> 
           </div>
           <div class="col font-poppins p-4 right display-sm-none">
             Jobs
@@ -52,7 +52,7 @@ export default function Nav(){
           <div class="col font-poppins p-4 right display-sm-none">
             Resorces
           </div>
-          <div class="col font-poppins p-4 right display-sm-none">
+          <div class="col font-poppins p-4 right display-sm-none color-white">
             <Link class="color-bg-p color-white no-decoration p-2 rounded" href="/"> Join Us </Link>
           </div>
           <div class="col-2 d-md-none right sz-20">
@@ -69,7 +69,7 @@ function Dropdown ({close}){
 	return(
 		<div class="container-fluid  border-top sz-18 vh-100 display-fixed ease">
 		<br />
-    <div class="py-3"><a class="dropdown-item" href="#">Dashboard</a></div>
+    <div class="py-3"><a class="dropdown-item" href="/membership">Membership</a></div>
     <div class="py-3"><a class="dropdown-item" href="#">Jobs</a></div>
     <div class="py-3"><a class="dropdown-item" href="#">Forums</a></div>
     <div class="py-3"><a class="dropdown-item" href="#">Resorces</a></div>

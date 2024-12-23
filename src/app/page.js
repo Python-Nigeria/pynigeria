@@ -24,7 +24,7 @@ export default function Home() {
               <div class="sz-16 sz-md-20 col-12 pt-3">
                 A space for python enthusiasts to share knowledge, tackle projects together and advance in various fields.
               </div>
-              <div class="col-12 pt-4">
+              <div class="col-12 pt-4 color-white">
                 <div class="row">
                 <Link class="button color-bg-p color-white rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration center" ef="https://chat.whatsapp.com/BiQWwZnBTgwFaAbLmhiF43" href="/account/signup">
                   Sign Up 

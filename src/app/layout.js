@@ -5,6 +5,7 @@ import "./css/fontawesome/css/all.min.css";
 import "./css/animate.min.css";
 import "./globals.css";
 import Nav from "./nav.js"
+import PopUp from "./pop.js"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <Nav />
       {children}
       <Footer />
+      <PopUp />
       </body>
     </html>
   );
