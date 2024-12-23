@@ -8,3 +8,19 @@
 .ease{
   transition: all 0.5s ease;
 }
+
+.background{
+  background-image:url('/background.png') ;
+  background-size:cover;
+  background-position: center;
+}
+
+@media(max-width:900px){
+  .background{
+    background-image:url('/background_small.png') ;
+    background-position:center ;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    
+  }
+}
