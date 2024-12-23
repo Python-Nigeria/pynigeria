@@ -19,7 +19,92 @@ export default function RootLayout({ children }) {
       <body className="font-montserrat">
         <Nav />
       {children}
+      <Footer />
       </body>
     </html>
   );
+}
+
+
+function Footer(){
+  return(
+     <footer class="text-center text-black" >
+    <div class="container">
+      <section class="mt-5">
+        <div class="row text-center d-flex justify-content-center pt-5">
+                    <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="no-decoration color-p">About us</a>
+            </h6>
+          </div>
+
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="no-decoration color-p">Resources</a>
+            </h6>
+          </div>
+
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="no-decoration color-p">Awards</a>
+            </h6>
+          </div>
+           <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="no-decoration color-p">Help</a>
+            </h6>
+          </div>
+          <div class="col-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+              <a href="#!" class="no-decoration color-p">Contact</a>
+            </h6>
+          </div>
+          
+        </div>
+        
+      </section>
+      
+
+      <hr class="my-5" />
+
+      <section class="mb-3">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8 sz-20">
+            <p>
+              Python Nigeria
+            </p>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="text-center mb-3">
+        <a href="" class=" me-4 color-p">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class=" me-4 color-p">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class=" me-4 color-p">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class=" me-4 color-p">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class=" me-4 color-p">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class=" me-4 color-p">
+          <i class="fab fa-github"></i>
+        </a>
+      </section>
+      </div>
+    <div class="text-center">
+      © 2024 Copyright:
+      <a class="color-s no-decoration mx-2" href="https://pynigeria.vercel.app/"
+         >Python-Nigeria.com</a
+        >
+    </div>
+  </footer>
+    )
 }

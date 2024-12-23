@@ -19,7 +19,7 @@ export default function Home() {
           <div class="col-md col-sm-12 color-p sz-30  sz-md-48" style={{marginTop:'-90px'}}>
             <div class="row borde p-3 px-md-5 mx-md-5">
               <div class="col-12" >
-                Welcome to the <br /> <b class="color-s"> Python Community </b>
+                Welcome to the <br /> <b class="color-s font-montserrat-bold sz-36 sz-md-48"> Python Community </b>
               </div>
               <div class="sz-16 sz-md-20 col-12 pt-3">
                 A space for python enthusiasts to share knowledge, tackle projects together and advance in various fields.
@@ -53,12 +53,12 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <section class="container-fluid background d-flex justify-content-center align-items-center vh-md-100 flex-column p-3 py-5 p-md-4">
+      <section class="container-fluid background d-flex justify-content-center align-items-center vh-md-100 flex-column p-4 py-5 p-md-5">
       <br class="display-md-none" />
       <br class="display-md-none"/>
       <br class="display-md-none" />
         <div class="row my-4">
-          <div class="col sz-24 bold color-white center"> What Makes Our Community Unique </div>
+          <div class="col sz-30 sz-md-36 bold color-white center font-montserrat-bold"> What Makes Our Community Unique </div>
         </div>
         <br />
         <div class="row">
@@ -123,35 +123,30 @@ export default function Home() {
       </section>
         
 
-        <section class="container-fluid d-flex align-items-center p-4 color-black vh-md-100">
-        <div class="row">
-          <div style={{}}>
-          <div class="row my-5">
-            <div class="col sz-24 bold color-p sz-md-36 center"> <span class="border-5"> About Our Community </span> </div>
+        <section class="container-fluid d-flex align-items-center p-4 p-md-5 color-black vh-md-100 flex-column">
+          <div class="row my-4">
+            <div class="col sz-30 color-p sz-md-36 center font-montserrat-bold"> <span class="border-5"> About Our Community </span> </div>
           </div>
 
-          <div class="row sz-16 sz-md-18 my-5">
+          <div class="row sz-16 sz-md-18 mb-5">
           <div class="col center">
             <p>Our Python community is a vibrant group of developers and enthusiasts  dedicated to exploring the latest in Python programming language Whether you are an expert or a newbie, you will find a supportive environment to grow and collaborate</p>
             <p> Our Vision is to empower Python developers to connect , grow and make a meaningful impact in tech </p>
-            <p> Our Core Values are : 
-              <div> Collaboration: together we solve problems and create Opportunies </div>
-              <div> Inclusivity : A welcoming space for all skill levels </div>
-              <div> Innovation : Pushing boundaries with Python </div>
-              <div> Growth : Supporting personal and professional development </div>
+            <p> 
+              <div> Our Core Values are ;  Collaboration: together we solve problems and create Opportunies .
+               Inclusivity : A welcoming space for all skill levels ,
+               Innovation : Pushing boundaries with Python ,
+               Growth : Supporting personal and professional development </div>
             </p>
           </div>
           </div>
           
-          <br />
-          <div class="row justify-content-center m-2 my-5">
+          <div class="row justify-content-center m-2 mb-3">
             <div class="col-md-3 col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Web Development </div>
             <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Data Science & Analysis </div>
             <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Machine Learning </div>
             <div class="col-md-3  col-sm-2 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Job Updates </div>
             <div class="col-md-3  col-sm-12 rounded center p-4 sz-18 m-2 color-bg-p color-white"> Learning </div>
-          </div>
-          </div>
           </div>
 
         </section>
@@ -159,38 +154,31 @@ export default function Home() {
         
 
         <section class='container-fluid d-flex justify-content-center align-items-center vh-100 flex-column background color-white'>
-        <br />
+        
+        
+        <div class="row mb-4">
+            <img src="/logo.svg" class="img-fluid rounded" />
+        </div>
+
         <div class="row">
-        <div style={{maginTop:'-100px'}}>
-          <div class="col-12 sz-24 sz-md-36 color-white">
+          <div class="col-12 center sz-24 sz-md-36 color-white">
            Join us on various platforms
           </div>
-          <div class="col sz-18 sz-md-24">
+        </div>
 
-          <div class="row">
-            <div class="col-12 p-3"> <i class="fab fa-whatsapp p-2 color-p"></i> Whatsapp </div>
-            <div class="col-12 p-3"> <i class="fab fa-telegram p-2 color-p"></i>  Telegram </div>
-            <div class="col-12 p-3"><i class="fab fa-discord p-2 color-p"></i>  Discord </div>
+
+          <div class="row center sz-18">
+            <div class="col-12 p-3">  Whatsapp <i class="fab fa-whatsapp p-2 color-p"></i> </div>
+            <div class="col-12 p-3">   Telegram <i class="fab fa-telegram p-2 color-p"></i> </div>
+            <div class="col-12 p-3">  Discord <i class="fab fa-discord p-2 color-p"></i> </div>
           </div>
-          <div class="row mt-4">
-            <div class="col">
+
+          <div class="row mt-4 ">
+            <div class="col hide">
               <Link class="button color-bg-p color-white rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration" href="https://chat.whatsapp.com/BiQWwZnBTgwFaAbLmhiF43">
                   Join the Community
                 </Link>
-
             </div>
-          </div>
-
-          </div>
-        </div>
-        </div>
-        </section>
-
-        
-
-        <section class="container-fluid color-bg-black color-white hide">
-        <div class="row py-2">
-          <div class="col sz-14 color- justify-content-center center"> Python Nigeria 2024 </div>
           </div>
         </section>
 
