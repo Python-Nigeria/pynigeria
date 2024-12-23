@@ -31,9 +31,9 @@ export default function Nav(){
 	}
 
 	return(
-		<nav id="nav" class={`container-fluid sz-14 sticky-top py-2 py-md-3 ${path === "/" ? animateClass : "color-bg-white color-black shadow-sm" } ease`} style={{zIndex:'20'}} >
+		<nav id="nav" class={`container-fluid sz-14 sticky-top p-4 py-3 py-md-3 ${path === "/" ? animateClass : "color-bg-white color-black shadow-sm" } ease`} style={{zIndex:'20'}} >
         <div class="row align-items-center">
-          <div class="col col-md-6 p-4 sz-16 bold">
+          <div class="col col-md-6 p-2 sz-16 bold">
           <div class="row align-items-center">
           <div class="col-1 col-md-1  p-0">
             <img src="/logo.svg" class="img-fluid" style={{height:'25px',width:'auto'}}/> </div>

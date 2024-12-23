@@ -1136,3 +1136,9 @@ body{
     left: 0;
   }
 }
+
+@media(max-width:400px){
+  .sz-xd{
+    font-size:33px!important;
+  }
+}

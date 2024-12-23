@@ -14,22 +14,22 @@ export default function Home() {
 
   return (
     <div class="sz-14">        
-      <motion.div id="hero" class="container-fluid color-bg-white py-1 my-md-0" animate={{scale:1}}>
-        <div class="row vh-100 justify-content-center align-items-center cente">
-          <div class="col-md col-sm-12 color-p sz-30  sz-md-48" style={{marginTop:'-90px'}}>
+      <section id="hero" class="container-fluid d-flex color-bg-white py-1 my-md-0 vh-100 justify-content-md-center align-items-md-center flex-column" animate={{scale:1}}>
+        <div class="row pt-4 pt-md-0">
+          <div class="col-md col-sm-12 color-p sz-30  sz-md-48">
             <div class="row borde p-3 px-md-5 mx-md-5">
               <div class="col-12" >
-                Welcome to the <br /> <b class="color-s font-montserrat-bold sz-36 sz-md-48"> Python Community </b>
+                Welcome to <br /> <b class="color-s font-montserrat-bold sz-xd sz-36 sz-md-48 "> Python Community </b>
               </div>
               <div class="sz-16 sz-md-20 col-12 pt-3">
                 A space for python enthusiasts to share knowledge, tackle projects together and advance in various fields.
               </div>
               <div class="col-12 pt-4">
                 <div class="row">
-                <Link class="button color-bg-p color-white rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration" ef="https://chat.whatsapp.com/BiQWwZnBTgwFaAbLmhiF43" href="/account/signup">
-                  Join the Community
+                <Link class="button color-bg-p color-white rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration center" ef="https://chat.whatsapp.com/BiQWwZnBTgwFaAbLmhiF43" href="/account/signup">
+                  Sign Up 
                 </Link>
-                <Link class="button bg-danger color-white rounded-4 mx-1 mx-md-1 col col-md-5  my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration" href="/wrapped">
+                <Link class="button bg-danger color-white rounded-4 mx-1 mx-md-1 col col-md-5  my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration center" href="/wrapped">
                   2024 Wrapped
                 </Link>
                 </div>
@@ -43,15 +43,15 @@ export default function Home() {
               </div> 
             </div>
           </div>
-          <div class="col-md col-sm-12 center display-md-none d-md-none">
+          <div class="col-md col-sm-12 center display-md-none d-md-none mt-3">
             <div class="row" >
-              <div class="col" >
-                <img class="img-fluid cover col-10" src="/hero.png"  style={{height:'380px',width:'auto',marginTop:'-200px'}} ></img>
+              <div class="col p-2" >
+                <img class="img-fluid cover p-2" src="/hero.png"  style={{height:'350px',width:'auto'}} ></img>
               </div> 
             </div>
           </div>
         </div>
-      </motion.div>
+      </section>
 
       <section class="container-fluid background d-flex justify-content-center align-items-center vh-md-100 flex-column p-4 py-5 p-md-5">
       <br class="display-md-none" />
@@ -157,7 +157,7 @@ export default function Home() {
         
         
         <div class="row mb-4">
-            <img src="/logo.svg" class="img-fluid rounded" />
+            <img src="/logo.svg" class="img-fluid rounded color-bg-white p-3" />
         </div>
 
         <div class="row">
