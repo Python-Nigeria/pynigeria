@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import basic from '../members.json'
+// import basic from '../members.json'
 
 export default function App(){
 	const [verify,setVerify] = React.useState()
