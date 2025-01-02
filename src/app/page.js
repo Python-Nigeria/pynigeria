@@ -27,9 +27,9 @@ export default function Home() {
               <div class="col-12 pt-4 color-white">
                 <div class="row">
                 <Link class="button color-bg-p color-white rounded-4 mx-2 mx-md-2 col col-md-5 my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-hover no-decoration center" ef="https://chat.whatsapp.com/BiQWwZnBTgwFaAbLmhiF43" href="/account/signup">
-                  Sign Up 
+                  Become a Member
                 </Link>
-                <Link class="button bg-danger color-white rounded-4 mx-1 mx-md-1 col col-md-5  my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration center" href="/wrapped">
+                <Link class="button bg-danger color-white rounded-4 mx-1 mx-md-1 col col-md-5  my-3 p-3 p-md-4  sz-16 sz-md-18 color-bg-t-hover color-white-hover no-decoration center hide d-none" href="/wrapped">
                   2024 Wrapped
                 </Link>
                 </div>

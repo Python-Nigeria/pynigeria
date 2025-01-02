@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
         <Nav />
       {children}
       <Footer />
-      <PopUp />
       </body>
     </html>
   );

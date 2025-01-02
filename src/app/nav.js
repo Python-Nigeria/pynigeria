@@ -44,7 +44,7 @@ export default function Nav(){
             <Link href="/membership" class="no-decoration"> Membership </Link> 
           </div>
           <div class="col font-poppins p-4 right display-sm-none">
-            Jobs
+            <Link href="/job" class="no-decoration">Jobs</Link>
           </div>
           <div class="col font-poppins p-4 right display-sm-none">
             Forums
