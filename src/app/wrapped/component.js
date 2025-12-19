@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import userStat from "../userStat.json"
+//import userStat from "../userStat.json"
 import Link from "next/link"
 
 export default function Main(){

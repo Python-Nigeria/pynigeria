@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "framer-motion": "^11.13.1",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "^15.5.0",
+    "package.json": "^2.0.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-intersection-observer": "^9.13.1"
   },
   "devDependencies": {

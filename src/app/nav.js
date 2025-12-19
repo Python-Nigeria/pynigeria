@@ -37,7 +37,7 @@ export default function Nav(){
           <div class="row align-items-center">
           <div class="col-1 col-md-1  p-0">
             <img src="/logo.svg" class="img-fluid" style={{height:'25px',width:'auto'}}/> </div>
-            <div class="col p-1">Python Nigeria</div>
+            <div class="col p-1">Python 9ja </div>
           </div>
           </div>
           <div class="col font-poppins p-4 right display-sm-none"> 

@@ -10,14 +10,15 @@ import PopUp from "./pop.js"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Python Nigeria",
-  description: "Python Nigeria Official Website",
+  title: "Python 9ja",
+  description: "Python 9ja Official Website",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="font-montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <Nav />
       {children}
       <Footer />
