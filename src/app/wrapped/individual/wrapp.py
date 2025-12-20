@@ -523,12 +523,36 @@ def analyze_messages(messages):
             "user_roles": user_roles,
             "fun_badges": fun
         }
+    # Calculate community stats
+    user_totals = {sender: len(msgs) for sender, msgs in user_messages.items()}
+    avg_msgs_per_user = sum(user_totals.values()) / len(user_totals) if user_totals else 0
+    
+    # Find busiest day
+    all_dates = [msg['date'] for msg in messages]
+    date_counts = Counter(all_dates)
+    busiest_day = date_counts.most_common(1)[0][0].strftime('%B %d, %Y') if date_counts else None
+    
+    # Top members
+    top_members = [
+        {"name": sender, "messages": count} 
+        for sender, count in sorted(user_totals.items(), key=lambda x: x[1], reverse=True)[:10]
+    ]
+    
+    # Add community stats to year_info
+    year_info["community"] = {
+        "total_messages": len(messages),
+        "active_members": len(user_messages),
+        "avg_messages_per_user": round(avg_msgs_per_user, 1),
+        "busiest_day": busiest_day,
+        "top_members": top_members
+    }
     
     print("Analysis complete!")
     return {
         "year_info": year_info,
         "individual": individual
     }
+    print("Analysis complete!")
 
 # --------------------------
 # EXPORT JSON

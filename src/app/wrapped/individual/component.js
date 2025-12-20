@@ -137,30 +137,95 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
 			content: (
 				<div className="text-center text-white">
-					<h1 className="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
-						Welcome to Your 2024 Journey! 🎉
-					</h1>
-					<p className="fs-4 animate__animated animate__fadeInUp animate__delay-1s">
+					<h1 className="display-3 fw-bold mb-4">
 						Let's rewind your year in the group...
+					</h1>
+					<p className="fs-4">
+						🥂🥂
 					</p>
 				</div>
 			)
 		},
 		
-		// Total messages
-		{
+				{
 			gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__bounceIn">
+					<h1 className="disply-5 sz-20 fw-bold mb-4">
+						Before we continue, let's take a quick look at the group's raw output this year.
+					</h1>
+					<p className="fs-5">
+					 😎😎
+					</p>
+				</div>
+			)
+		},
+
+		// NEW: Community Overview
+		{
+			gradient: 'linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h2 className="fs-2 mb-4 bold">
+						Python 9ja Stats
+					</h2>
+					<div className="row g-3">
+						<div className="col-12">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-48 fw-bold">{yearInfo.community?.total_messages?.toLocaleString() || 'N/A'}</div>
+								<div className="fs-6 color-black">Total Messages</div>
+							</div>
+						</div>
+						<div className="col-6">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-48 fw-bold">{yearInfo.community?.active_members || 'N/A'}</div>
+								<div className="fs-6 color-black">Active Members</div>
+							</div>
+						</div>
+						<div className="col-6">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-16 color-black">Busiest Day</div>
+								<div className="fs-5 fw-bold">{yearInfo.community?.busiest_day || 'N/A'}</div>
+							</div>
+						</div>
+					</div>
+					<p className="fs-6 opacity-75 mt-4">
+						
+					</p>
+				</div>
+			)
+		},
+		
+						{
+			gradient: 'linear-gradient(135deg, #9d50bb 0%, #6e48aa 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h1 className="display-3 fw-bold mb-4">
+						Now let's see YOUR impact...
+					</h1>
+					<p className="fs-4">
+					 📊
+					</p>
+				</div>
+			)
+		},
+
+		 
+		
+		// Total messages
+		{
+			gradient: 'linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)',
+			content: (
+				<div className="text-center text-white">
+					<div className="mb-4">
 						<i className="fas fa-comments" style={{fontSize: '5rem'}}></i>
 					</div>
-					<h2 className="fs-3 mb-3 animate__animated animate__fadeInDown">Your thumbs worked overtime!</h2>
-					<div className="displa-1 fw-bold sz-48 mb-3 animate__animated animate__zoomIn animate__delay-1s">
+					<h2 className="sz-24 mb-3 hide">Your thumbs worked overtime!</h2>
+					<div className="displa-1 fw-bold sz-60 mb-3 color-black">
 						{stats.total_messages.toLocaleString()}
 					</div>
-					<p className="fs-4 animate__animated animate__fadeInUp animate__delay-1s">messages sent this year 📱</p>
-					<p className="fs-6 mt-3 opacity-75 animate__animated animate__fadeIn animate__delay-2s">
+					<p className="fs-4">messages sent!!!</p>
+					<p className="fs-6 mt-3 opacity-90">
 						Active for {stats.total_days_active} days • Avg {stats.avg_messages_per_active_day} msgs/day
 					</p>
 				</div>
@@ -172,14 +237,57 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #232526 0%, #414345 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__tada">
+					<div className="mb-4">
 						<i className="fas fa-trophy" style={{fontSize: '5rem'}}></i>
 					</div>
-					<h2 className="fs-3 mb-3 animate__animated animate__fadeInDown">You're in the top</h2>
-					<div className="display-1 fw-bold mb-3 animate__animated animate__bounceIn animate__delay-1s">
-						{(100 - stats.percentile).toFixed(0)}%
+					<h2 className="fs-3 mb-3">You're in the top</h2>
+					<div className="diplay-1 fw-bold mb-3 sz-60">
+						{(100 - stats.percentile).toFixed(1)}%
 					</div>
-					<p className="fs-4 animate__animated animate__fadeInUp animate__delay-2s">of most active members! 🌟</p>
+					<p className="sz-18">of most active members! 🌟</p>
+				</div>
+			)
+		},
+
+		// NEW: Community Comparison
+		{
+			gradient: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h2 className="fs-3 mb-5">
+						You  🆚  The Group
+					</h2>
+					<div className="d-flex flex-column gap-4">
+						<div>
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="d-flex justify-content-between align-items-center">
+									<div className="text-start">
+										<div className="fs-5 opacity-75">Your Messages</div>
+										<div className="fs-2 fw-bold">{stats.total_messages}</div>
+									</div>
+									<div className="fs-1"></div>
+								</div>
+								<div className="progress mt-3" style={{height: '10px'}}>
+									<div 
+										className="progress-bar bg-warning" 
+										style={{width: `${stats.percentile}%`}}
+									></div>
+								</div>
+								<div className="fs-6 opacity-75 mt-2">
+									{stats.percentile.toFixed(1)}% of top contributor
+								</div>
+							</div>
+						</div>
+						
+						<div>
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="fs-5">Group Average</div>
+								<div className="fs-3 fw-bold">
+									{yearInfo.community?.avg_messages_per_user || 'N/A'} messages/person
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			)
 		},
@@ -189,16 +297,16 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__rubberBand">
+					<div className="mb-4">
 						<i className="fas fa-fire" style={{fontSize: '5rem'}}></i>
 					</div>
-					<h2 className="fs-3 mb-3 animate__animated animate__fadeInDown">Your longest streak?</h2>
-					<div className="display-1 fw-bold mb-3 animate__animated animate__zoomIn animate__delay-1s">
+					<h2 className="fs-3 mb-3">Your longest streak?</h2>
+					<div className="sz-60  fw-bold mb-3">
 						{stats.longest_streak_days}
 					</div>
-					<p className="fs-4 animate__animated animate__fadeInUp animate__delay-1s">days straight! 🔥</p>
+					<p className="fs-4">days straight! 🔥</p>
 					{stats.current_streak_days > 0 && (
-						<p className="fs-5 mt-4 animate__animated animate__fadeIn animate__delay-2s">
+						<p className="fs-5 mt-4 hide">
 							Current streak: <strong>{stats.current_streak_days} days</strong> ⚡
 						</p>
 					)}
@@ -211,17 +319,17 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__flash">
+					<div className="mb-4">
 						<i className="fas fa-bolt" style={{fontSize: '5rem'}}></i>
 					</div>
-					<h2 className="fs-3 mb-3 animate__animated animate__fadeInDown">Your average reply time?</h2>
+					<h2 className="fs-3 mb-3">Your average reply time?</h2>
 					{stats.avg_response_time_minutes ? (
 						<>
-							<div className="display-1 fw-bold mb-3 animate__animated animate__bounceIn animate__delay-1s">
+							<div className="sz-60 fw-bold mb-3">
 								{stats.avg_response_time_minutes.toFixed(1)}
 							</div>
-							<p className="fs-4 animate__animated animate__fadeInUp animate__delay-1s">minutes ⚡</p>
-							<p className="fs-5 mt-4 animate__animated animate__fadeIn animate__delay-2s">Lightning fast responder! 🚀</p>
+							<p className="fs-3">minutes ⚡</p>
+							<p className="fs-4 mt-4">Lightning fast responder! 🚀</p>
 						</>
 					) : (
 						<p className="fs-4 animate__animated animate__fadeIn animate__delay-1s">You're more of a conversation starter! 💡</p>
@@ -235,24 +343,24 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #fc466b 0%, #3f5efb 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__swing">
+					<div className="mb-4">
 						{stats.weekend_percentage > 40 ? (
 							<i className="fas fa-umbrella-beach" style={{fontSize: '5rem'}}></i>
 						) : (
 							<i className="fas fa-briefcase" style={{fontSize: '5rem'}}></i>
 						)}
 					</div>
-					<h2 className="fs-3 mb-4 animate__animated animate__fadeInDown">
-						{stats.weekend_percentage > 40 ? 'Weekend Warrior! 🌴' : 'Weekday Grinder! 💼'}
+					<h2 className="fs-3 mb-4">
+						{stats.weekend_percentage > 40 ? 'Weekend Warrior!' : 'Weekday Grinder! '}
 					</h2>
 					<div className="row g-4">
-						<div className="col-6 animate__animated animate__fadeInLeft animate__delay-1s">
+						<div className="col-6">
 							<div className="bg-white bg-opacity-25 rounded-4 p-3">
 								<div className="fs-1 fw-bold">{stats.weekday_messages}</div>
 								<div className="fs-5">Weekday</div>
 							</div>
 						</div>
-						<div className="col-6 animate__animated animate__fadeInRight animate__delay-1s">
+						<div className="col-6">
 							<div className="bg-white bg-opacity-25 rounded-4 p-3">
 								<div className="fs-1 fw-bold">{stats.weekend_messages}</div>
 								<div className="fs-5">Weekend</div>
@@ -268,30 +376,30 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__pulse animate__infinite animate__slow">
+					<div className="mb-4">
 						{stats.time_preference === 'night_owl' && <i className="fas fa-moon" style={{fontSize: '5rem'}}></i>}
 						{stats.time_preference === 'early_bird' && <i className="fas fa-sun" style={{fontSize: '5rem'}}></i>}
 						{stats.time_preference === 'daytime' && <i className="fas fa-cloud-sun" style={{fontSize: '5rem'}}></i>}
 					</div>
-					<h2 className="fs-3 mb-4 animate__animated animate__fadeInDown">
+					<h2 className="fs-3 mb-4">
 						{stats.time_preference === 'night_owl' && "You're officially a Night Owl! 🦉"}
-						{stats.time_preference === 'early_bird' && "Early Bird Energy! 🌅"}
-						{stats.time_preference === 'daytime' && "Daytime Warrior! ☀️"}
+						{stats.time_preference === 'early_bird' && "Early Bird Energy!"}
+						{stats.time_preference === 'daytime' && "Daytime Warrior!"}
 					</h2>
 					<div className="row g-3">
-						<div className="col-4 animate__animated animate__fadeInUp">
+						<div className="col-4">
 							<div className="bg-white bg-opacity-25 rounded-3 p-2">
 								<div className="fs-4 fw-bold">{stats.early_bird_messages}</div>
 								<div className="fs-6">Morning</div>
 							</div>
 						</div>
-						<div className="col-4 animate__animated animate__fadeInUp animate__delay-1s">
+						<div className="col-4">
 							<div className="bg-white bg-opacity-25 rounded-3 p-2">
 								<div className="fs-4 fw-bold">{stats.daytime_messages}</div>
 								<div className="fs-6">Daytime</div>
 							</div>
 						</div>
-						<div className="col-4 animate__animated animate__fadeInUp animate__delay-2s">
+						<div className="col-4">
 							<div className="bg-white bg-opacity-25 rounded-3 p-2">
 								<div className="fs-4 fw-bold">{stats.night_owl_messages}</div>
 								<div className="fs-6">Night</div>
@@ -304,17 +412,17 @@ function IndividualWrap({data, onBack}){
 
 		// Replies received
 		{
-			gradient: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
+			gradient: 'linear-gradient(135deg, #0f2027 0%, #2c5364 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__heartBeat">
+					<div className="mb-4">
 						<i className="fas fa-reply-all" style={{fontSize: '5rem'}}></i>
 					</div>
-					<h2 className="fs-3 mb-3 animate__animated animate__fadeInDown">People replied to you</h2>
-					<div className="display-1 fw-bold mb-3 animate__animated animate__bounceIn animate__delay-1s">
+					<h2 className="fs-3 mb-3">People replied to you</h2>
+					<div className="display-1 fw-bold mb-3">
 						{stats.replies_received}
 					</div>
-					<p className="fs-4 animate__animated animate__fadeInUp animate__delay-2s">times! Reply magnet! 🧲</p>
+					<p className="fs-4">times! Reply magnet! 🧲</p>
 				</div>
 			)
 		},
@@ -324,14 +432,14 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)',
 			content: (
 				<div className="text-center text-white">
-					<div className="mb-4 animate__animated animate__swing">
+					<div className="mb-4">
 						<i className="fas fa-lightbulb" style={{fontSize: '5rem'}}></i>
 					</div>
-					<h2 className="fs-3 mb-3 animate__animated animate__fadeInDown">You started</h2>
-					<div className="display-1 fw-bold mb-3 animate__animated animate__zoomIn animate__delay-1s">
+					<h2 className="fs-3 mb-3">You started</h2>
+					<div className="sz-60 fw-bold mb-3">
 						{stats.conversation_starters}
 					</div>
-					<p className="fs-4 animate__animated animate__fadeInUp animate__delay-2s">conversations this year! 💡</p>
+					<p className="fs-4">conversations this year! 💡</p>
 				</div>
 			)
 		},
@@ -341,9 +449,10 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #f857a6 0%, #ff5858 100%)',
 			content: (
 				<div className="text-center text-white">
-					<h2 className="fs-3 mb-5 animate__animated animate__fadeInDown">Your Communication Style</h2>
+					<h2 className="fs-3 mb-3  mt-5">
+					  <br /> Your Communication Style</h2>
 					<div className="row g-4">
-						<div className="col-6 animate__animated animate__fadeInLeft">
+						<div className="col-12">
 							<div className="bg-white bg-opacity-25 rounded-4 p-4">
 								<div className="mb-3">
 									<i className="fas fa-question-circle" style={{fontSize: '3rem'}}></i>
@@ -353,7 +462,7 @@ function IndividualWrap({data, onBack}){
 								<div className="fs-6 opacity-75 mt-2">Asked 🔍</div>
 							</div>
 						</div>
-						<div className="col-6 animate__animated animate__fadeInRight">
+						<div className="col-12">
 							<div className="bg-white bg-opacity-25 rounded-4 p-4">
 								<div className="mb-3">
 									<i className="fas fa-hands-helping" style={{fontSize: '3rem'}}></i>
@@ -373,7 +482,7 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%)',
 			content: (
 				<div className="text-center text-white">
-					<h2 className="fs-3 mb-4 animate__animated animate__fadeInDown">Your Top Interests 🎯</h2>
+					<h2 className="fs-3 mb-4 text-warning">Your Top Interests 🎯</h2>
 					{stats.topic_interests && stats.topic_interests.length > 0 ? (
 						<div className="d-flex flex-column gap-3">
 							{stats.topic_interests.map((topic, idx) => (
@@ -427,11 +536,12 @@ function IndividualWrap({data, onBack}){
 			gradient: 'linear-gradient(135deg, #ee0979 0%, #ff6a00 100%)',
 			content: (
 				<div className="text-center text-white">
-					<h2 className="fs-2 mb-5 animate__animated animate__fadeInDown">Your Special Roles! 🎭</h2>
+					<br />
+					<h2 className="fs-2 mb-3 mt-5 pt-3 animate__animated animate__fadeInDown text-warning">Your Special Roles! 🎭</h2>
 					{stats.user_roles && stats.user_roles.length > 0 ? (
-						<div className="d-flex flex-column gap-3">
+						<div className="d-flex flex-column gap-3 justify-content-left">
 							{stats.user_roles.slice(0, 4).map((role, idx) => (
-								<div key={idx} className={`bg-white bg-opacity-25 rounded-4 p-4 animate__animated animate__zoomIn`} style={{animationDelay: `${idx * 0.3}s`}}>
+								<div key={idx} className={`bg-whit border-bottom g-opacity-25 roundd-4 p-4 left animate__animated animate__zoomIn`} style={{animationDelay: `${idx * 0.3}s`}}>
 									<div className="fs-3 fw-bold mb-2">{role.title}</div>
 									<div className="fs-6 opacity-75">{role.description}</div>
 								</div>
@@ -474,6 +584,47 @@ function IndividualWrap({data, onBack}){
 					) : (
 						<p className="fs-4 animate__animated animate__fadeIn animate__delay-1s">Keep chatting to unlock badges! 🎯</p>
 					)}
+				</div>
+			)
+		},
+
+		// NEW: Top Members Leaderboard
+		{
+			gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h2 className="fs-3 mb-4">
+						Group Champions 👑
+					</h2>
+					<p className="fs-6 opacity-75 mb-4">
+						The most active members of 2024
+					</p>
+					<div className="d-flex flex-column gap-3">
+						{yearInfo.community?.top_members?.slice(0, 5).map((member, idx) => (
+							<div 
+								key={idx} 
+								className="bg-white bg-opacity-25 rounded-4 p-3"
+							>
+								<div className="d-flex justify-content-between align-items-center">
+									<div className="d-flex align-items-center gap-3">
+										<div className="fs-3">
+											{idx === 0 && '🥇'}
+											{idx === 1 && '🥈'}
+											{idx === 2 && '🥉'}
+											{idx > 2 && `${idx + 1}.`}
+										</div>
+										<div className="text-start">
+											<div className="fw-bold">{member.name === userName ? 'You! 🎉' : member.name}</div>
+											<div className="fs-6 opacity-75">{member.messages.toLocaleString()} messages</div>
+										</div>
+									</div>
+									{member.name === userName && (
+										<div className="fs-4">⭐</div>
+									)}
+								</div>
+							</div>
+						))}
+					</div>
 				</div>
 			)
 		},

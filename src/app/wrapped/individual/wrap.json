@@ -6,9 +6,57 @@
       "message": "Good evening"
     },
     "last_message": {
-      "sender": "09152307875",
-      "datetime": "2025-12-19T15:42:00",
-      "message": "👀"
+      "sender": "+1 (502) 263-3522",
+      "datetime": "2025-12-19T23:38:00",
+      "message": "@⁨~Chukwuebuka Ezeokeke⁩ we still dey game tomorrow and next?"
+    },
+    "community": {
+      "total_messages": 42734,
+      "active_members": 549,
+      "avg_messages_per_user": 77.8,
+      "busiest_day": "January 30, 2025",
+      "top_members": [
+        {
+          "name": "09152307875",
+          "messages": 3705
+        },
+        {
+          "name": "08073194769",
+          "messages": 3608
+        },
+        {
+          "name": "+1 (502) 263-3522",
+          "messages": 3404
+        },
+        {
+          "name": "07059822507",
+          "messages": 1869
+        },
+        {
+          "name": "Loulou🙄",
+          "messages": 1809
+        },
+        {
+          "name": "09018230026",
+          "messages": 1728
+        },
+        {
+          "name": "07030230969",
+          "messages": 1552
+        },
+        {
+          "name": "08134514639",
+          "messages": 1546
+        },
+        {
+          "name": "08118997115",
+          "messages": 1317
+        },
+        {
+          "name": "09041563211",
+          "messages": 1304
+        }
+      ]
     }
   },
   "individual": {
@@ -48,20 +96,20 @@
         "quick_responder"
       ]
     },
-    "tensor.py": {
-      "total_messages": 598,
-      "percentile": 16.16,
-      "total_days_active": 82,
-      "avg_messages_per_active_day": 7.29,
+    "09079755026": {
+      "total_messages": 600,
+      "percentile": 16.19,
+      "total_days_active": 83,
+      "avg_messages_per_active_day": 7.23,
       "longest_streak_days": 9,
       "current_streak_days": 1,
-      "avg_response_time_minutes": 2.68,
+      "avg_response_time_minutes": 2.72,
       "weekend_messages": 233,
-      "weekday_messages": 365,
-      "weekend_percentage": 38.96,
+      "weekday_messages": 367,
+      "weekend_percentage": 38.83,
       "early_bird_messages": 144,
       "night_owl_messages": 28,
-      "daytime_messages": 426,
+      "daytime_messages": 428,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
@@ -74,7 +122,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 53
+          "count": 58
         },
         {
           "topic": "help_support",
@@ -135,9 +183,9 @@
         "quick_responder"
       ]
     },
-    "ebulamicheal": {
+    "08073194769": {
       "total_messages": 3608,
-      "percentile": 97.51,
+      "percentile": 97.38,
       "total_days_active": 214,
       "avg_messages_per_active_day": 16.86,
       "longest_streak_days": 33,
@@ -161,7 +209,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 350
+          "count": 370
         },
         {
           "topic": "jobs_career",
@@ -250,7 +298,7 @@
     },
     "07042507852": {
       "total_messages": 1026,
-      "percentile": 27.73,
+      "percentile": 27.69,
       "total_days_active": 143,
       "avg_messages_per_active_day": 7.17,
       "longest_streak_days": 16,
@@ -444,33 +492,33 @@
       ],
       "fun_badges": []
     },
-    "Ada-Ihueze": {
-      "total_messages": 3399,
-      "percentile": 91.86,
+    "+1 (502) 263-3522": {
+      "total_messages": 3404,
+      "percentile": 91.88,
       "total_days_active": 275,
-      "avg_messages_per_active_day": 12.36,
+      "avg_messages_per_active_day": 12.38,
       "longest_streak_days": 32,
       "current_streak_days": 10,
       "avg_response_time_minutes": 2.98,
       "weekend_messages": 914,
-      "weekday_messages": 2485,
-      "weekend_percentage": 26.89,
+      "weekday_messages": 2490,
+      "weekend_percentage": 26.85,
       "early_bird_messages": 213,
-      "night_owl_messages": 959,
-      "daytime_messages": 2227,
+      "night_owl_messages": 961,
+      "daytime_messages": 2230,
       "time_preference": "night_owl",
       "was_first_message": false,
-      "was_last_message": false,
-      "replies_received": 2119,
-      "conversation_starters": 365,
-      "question_messages": 823,
+      "was_last_message": true,
+      "replies_received": 2120,
+      "conversation_starters": 366,
+      "question_messages": 825,
       "helping_messages": 47,
       "favorite_emoji": "🤪",
       "topic_interests": [
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 413
+          "count": 435
         },
         {
           "topic": "jobs_career",
@@ -557,9 +605,9 @@
         "quick_responder"
       ]
     },
-    "Aaliyah": {
+    "09054253327": {
       "total_messages": 422,
-      "percentile": 11.41,
+      "percentile": 11.39,
       "total_days_active": 60,
       "avg_messages_per_active_day": 7.03,
       "longest_streak_days": 5,
@@ -583,7 +631,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 25
+          "count": 26
         },
         {
           "topic": "jobs_career",
@@ -645,7 +693,7 @@
     },
     "08101353210": {
       "total_messages": 548,
-      "percentile": 14.81,
+      "percentile": 14.79,
       "total_days_active": 134,
       "avg_messages_per_active_day": 4.09,
       "longest_streak_days": 10,
@@ -669,7 +717,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 35
+          "count": 36
         },
         {
           "topic": "help_support",
@@ -736,32 +784,32 @@
       ]
     },
     "08160535033": {
-      "total_messages": 443,
-      "percentile": 11.97,
-      "total_days_active": 108,
+      "total_messages": 447,
+      "percentile": 12.06,
+      "total_days_active": 109,
       "avg_messages_per_active_day": 4.1,
       "longest_streak_days": 4,
-      "current_streak_days": 3,
-      "avg_response_time_minutes": 2.42,
+      "current_streak_days": 4,
+      "avg_response_time_minutes": 2.45,
       "weekend_messages": 112,
-      "weekday_messages": 331,
-      "weekend_percentage": 25.28,
+      "weekday_messages": 335,
+      "weekend_percentage": 25.06,
       "early_bird_messages": 90,
       "night_owl_messages": 72,
-      "daytime_messages": 281,
+      "daytime_messages": 285,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 354,
+      "replies_received": 357,
       "conversation_starters": 37,
-      "question_messages": 95,
+      "question_messages": 96,
       "helping_messages": 2,
       "favorite_emoji": "😂",
       "topic_interests": [
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 35
+          "count": 41
         },
         {
           "topic": "jobs_career",
@@ -828,7 +876,7 @@
     },
     "09032966430": {
       "total_messages": 15,
-      "percentile": 0.41,
+      "percentile": 0.4,
       "total_days_active": 7,
       "avg_messages_per_active_day": 2.14,
       "longest_streak_days": 1,
@@ -864,7 +912,7 @@
     },
     "07030230969": {
       "total_messages": 1552,
-      "percentile": 41.95,
+      "percentile": 41.89,
       "total_days_active": 193,
       "avg_messages_per_active_day": 8.04,
       "longest_streak_days": 12,
@@ -888,7 +936,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 159
+          "count": 158
         },
         {
           "topic": "jobs_career",
@@ -972,7 +1020,7 @@
     },
     "09045892076": {
       "total_messages": 210,
-      "percentile": 5.68,
+      "percentile": 5.67,
       "total_days_active": 78,
       "avg_messages_per_active_day": 2.69,
       "longest_streak_days": 5,
@@ -996,7 +1044,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 10
+          "count": 11
         },
         {
           "topic": "web_dev",
@@ -1041,7 +1089,7 @@
         "weekend_warrior"
       ]
     },
-    "Enzyme": {
+    "07041155897": {
       "total_messages": 70,
       "percentile": 1.89,
       "total_days_active": 19,
@@ -1090,7 +1138,7 @@
     },
     "09065011334": {
       "total_messages": 552,
-      "percentile": 14.92,
+      "percentile": 14.9,
       "total_days_active": 163,
       "avg_messages_per_active_day": 3.39,
       "longest_streak_days": 14,
@@ -1114,7 +1162,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 41
+          "count": 42
         },
         {
           "topic": "python_dev",
@@ -1177,7 +1225,7 @@
     },
     "09155303375": {
       "total_messages": 740,
-      "percentile": 20.0,
+      "percentile": 19.97,
       "total_days_active": 69,
       "avg_messages_per_active_day": 10.72,
       "longest_streak_days": 5,
@@ -1201,7 +1249,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 71
+          "count": 72
         },
         {
           "topic": "web_dev",
@@ -1268,7 +1316,7 @@
     },
     "08103617608": {
       "total_messages": 702,
-      "percentile": 18.97,
+      "percentile": 18.95,
       "total_days_active": 134,
       "avg_messages_per_active_day": 5.24,
       "longest_streak_days": 9,
@@ -1292,7 +1340,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 71
+          "count": 73
         },
         {
           "topic": "jobs_career",
@@ -1405,9 +1453,9 @@
         "quick_responder"
       ]
     },
-    "CryptoKëllz 🤪🤓😇": {
+    "09027208946": {
       "total_messages": 262,
-      "percentile": 7.08,
+      "percentile": 7.07,
       "total_days_active": 72,
       "avg_messages_per_active_day": 3.64,
       "longest_streak_days": 4,
@@ -1431,7 +1479,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 46
+          "count": 47
         },
         {
           "topic": "help_support",
@@ -1484,7 +1532,7 @@
     },
     "08098688235": {
       "total_messages": 988,
-      "percentile": 26.7,
+      "percentile": 26.67,
       "total_days_active": 90,
       "avg_messages_per_active_day": 10.98,
       "longest_streak_days": 4,
@@ -1564,7 +1612,7 @@
     },
     "07055673702": {
       "total_messages": 52,
-      "percentile": 1.41,
+      "percentile": 1.4,
       "total_days_active": 17,
       "avg_messages_per_active_day": 3.06,
       "longest_streak_days": 2,
@@ -1612,7 +1660,7 @@
     },
     "09041563211": {
       "total_messages": 1304,
-      "percentile": 35.24,
+      "percentile": 35.2,
       "total_days_active": 167,
       "avg_messages_per_active_day": 7.81,
       "longest_streak_days": 11,
@@ -1636,7 +1684,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 100
+          "count": 102
         },
         {
           "topic": "help_support",
@@ -1708,33 +1756,33 @@
         "quick_responder"
       ]
     },
-    "habeebbabasulaiman": {
-      "total_messages": 1723,
-      "percentile": 46.57,
-      "total_days_active": 222,
-      "avg_messages_per_active_day": 7.76,
+    "09018230026": {
+      "total_messages": 1728,
+      "percentile": 46.64,
+      "total_days_active": 223,
+      "avg_messages_per_active_day": 7.75,
       "longest_streak_days": 12,
       "current_streak_days": 1,
       "avg_response_time_minutes": 2.19,
       "weekend_messages": 526,
-      "weekday_messages": 1197,
-      "weekend_percentage": 30.53,
+      "weekday_messages": 1202,
+      "weekend_percentage": 30.44,
       "early_bird_messages": 451,
       "night_owl_messages": 235,
-      "daytime_messages": 1037,
+      "daytime_messages": 1042,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 1190,
+      "replies_received": 1194,
       "conversation_starters": 99,
-      "question_messages": 359,
+      "question_messages": 361,
       "helping_messages": 32,
       "favorite_emoji": "😂",
       "topic_interests": [
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 141
+          "count": 147
         },
         {
           "topic": "jobs_career",
@@ -1812,24 +1860,24 @@
       ]
     },
     "08134514639": {
-      "total_messages": 1543,
-      "percentile": 41.7,
-      "total_days_active": 118,
-      "avg_messages_per_active_day": 13.08,
+      "total_messages": 1546,
+      "percentile": 41.73,
+      "total_days_active": 119,
+      "avg_messages_per_active_day": 12.99,
       "longest_streak_days": 8,
-      "current_streak_days": 1,
+      "current_streak_days": 2,
       "avg_response_time_minutes": 1.93,
       "weekend_messages": 235,
-      "weekday_messages": 1308,
-      "weekend_percentage": 15.23,
+      "weekday_messages": 1311,
+      "weekend_percentage": 15.2,
       "early_bird_messages": 429,
-      "night_owl_messages": 183,
+      "night_owl_messages": 186,
       "daytime_messages": 931,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 745,
-      "conversation_starters": 23,
+      "replies_received": 746,
+      "conversation_starters": 24,
       "question_messages": 302,
       "helping_messages": 24,
       "favorite_emoji": "🤣",
@@ -1837,7 +1885,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 105
+          "count": 120
         },
         {
           "topic": "learning",
@@ -1966,7 +2014,7 @@
     },
     "+233 54 893 3288": {
       "total_messages": 139,
-      "percentile": 3.76,
+      "percentile": 3.75,
       "total_days_active": 60,
       "avg_messages_per_active_day": 2.32,
       "longest_streak_days": 6,
@@ -2032,7 +2080,7 @@
     },
     "ArchSaint Nexus": {
       "total_messages": 52,
-      "percentile": 1.41,
+      "percentile": 1.4,
       "total_days_active": 24,
       "avg_messages_per_active_day": 2.17,
       "longest_streak_days": 3,
@@ -2124,24 +2172,24 @@
       ]
     },
     "Loulou🙄": {
-      "total_messages": 1807,
-      "percentile": 48.84,
+      "total_messages": 1809,
+      "percentile": 48.83,
       "total_days_active": 224,
-      "avg_messages_per_active_day": 8.07,
+      "avg_messages_per_active_day": 8.08,
       "longest_streak_days": 24,
       "current_streak_days": 1,
       "avg_response_time_minutes": 2.89,
       "weekend_messages": 558,
-      "weekday_messages": 1249,
-      "weekend_percentage": 30.88,
+      "weekday_messages": 1251,
+      "weekend_percentage": 30.85,
       "early_bird_messages": 391,
       "night_owl_messages": 169,
-      "daytime_messages": 1247,
+      "daytime_messages": 1249,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 1577,
-      "conversation_starters": 114,
+      "replies_received": 1578,
+      "conversation_starters": 115,
       "question_messages": 439,
       "helping_messages": 68,
       "favorite_emoji": "😂",
@@ -2149,7 +2197,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 255
+          "count": 265
         },
         {
           "topic": "jobs_career",
@@ -2233,7 +2281,7 @@
     },
     "08144461649": {
       "total_messages": 287,
-      "percentile": 7.76,
+      "percentile": 7.75,
       "total_days_active": 34,
       "avg_messages_per_active_day": 8.44,
       "longest_streak_days": 4,
@@ -2257,7 +2305,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 34
+          "count": 36
         },
         {
           "topic": "jobs_career",
@@ -2313,7 +2361,7 @@
     },
     "+237 6 51 32 19 11": {
       "total_messages": 125,
-      "percentile": 3.38,
+      "percentile": 3.37,
       "total_days_active": 30,
       "avg_messages_per_active_day": 4.17,
       "longest_streak_days": 4,
@@ -2418,7 +2466,7 @@
     },
     "09014204138": {
       "total_messages": 118,
-      "percentile": 3.19,
+      "percentile": 3.18,
       "total_days_active": 25,
       "avg_messages_per_active_day": 4.72,
       "longest_streak_days": 7,
@@ -2554,9 +2602,9 @@
         "quick_responder"
       ]
     },
-    "Olotu Praise Jah Python": {
+    "07083023292": {
       "total_messages": 268,
-      "percentile": 7.24,
+      "percentile": 7.23,
       "total_days_active": 59,
       "avg_messages_per_active_day": 4.54,
       "longest_streak_days": 6,
@@ -2580,7 +2628,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 31
+          "count": 33
         },
         {
           "topic": "jobs_career",
@@ -2718,7 +2766,7 @@
     },
     "07030077431": {
       "total_messages": 25,
-      "percentile": 0.68,
+      "percentile": 0.67,
       "total_days_active": 11,
       "avg_messages_per_active_day": 2.27,
       "longest_streak_days": 2,
@@ -2763,24 +2811,24 @@
         "quick_responder"
       ]
     },
-    "Trial Version Of A Good Person the_gopher": {
-      "total_messages": 1314,
-      "percentile": 35.51,
-      "total_days_active": 118,
-      "avg_messages_per_active_day": 11.14,
+    "08118997115": {
+      "total_messages": 1317,
+      "percentile": 35.55,
+      "total_days_active": 119,
+      "avg_messages_per_active_day": 11.07,
       "longest_streak_days": 8,
-      "current_streak_days": 4,
+      "current_streak_days": 1,
       "avg_response_time_minutes": 1.58,
       "weekend_messages": 440,
-      "weekday_messages": 874,
-      "weekend_percentage": 33.49,
+      "weekday_messages": 877,
+      "weekend_percentage": 33.41,
       "early_bird_messages": 560,
       "night_owl_messages": 51,
-      "daytime_messages": 703,
+      "daytime_messages": 706,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 723,
+      "replies_received": 724,
       "conversation_starters": 36,
       "question_messages": 164,
       "helping_messages": 5,
@@ -2789,7 +2837,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 133
+          "count": 138
         },
         {
           "topic": "jobs_career",
@@ -2857,7 +2905,7 @@
     },
     "08131326928": {
       "total_messages": 1031,
-      "percentile": 27.86,
+      "percentile": 27.83,
       "total_days_active": 117,
       "avg_messages_per_active_day": 8.81,
       "longest_streak_days": 13,
@@ -2881,7 +2929,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 109
+          "count": 120
         },
         {
           "topic": "help_support",
@@ -2954,7 +3002,7 @@
     },
     "Vee": {
       "total_messages": 136,
-      "percentile": 3.68,
+      "percentile": 3.67,
       "total_days_active": 11,
       "avg_messages_per_active_day": 12.36,
       "longest_streak_days": 1,
@@ -2978,7 +3026,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 5
+          "count": 6
         }
       ],
       "activity_level": "regular",
@@ -3004,7 +3052,7 @@
     },
     "09068762493": {
       "total_messages": 698,
-      "percentile": 18.86,
+      "percentile": 18.84,
       "total_days_active": 105,
       "avg_messages_per_active_day": 6.65,
       "longest_streak_days": 7,
@@ -3028,7 +3076,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 88
+          "count": 89
         },
         {
           "topic": "help_support",
@@ -3102,7 +3150,7 @@
     },
     "07033928806": {
       "total_messages": 75,
-      "percentile": 2.03,
+      "percentile": 2.02,
       "total_days_active": 17,
       "avg_messages_per_active_day": 4.41,
       "longest_streak_days": 1,
@@ -3325,7 +3373,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 13
+          "count": 14
         },
         {
           "topic": "jobs_career",
@@ -3379,7 +3427,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 16
+          "count": 17
         },
         {
           "topic": "jobs_career",
@@ -3433,6 +3481,11 @@
         {
           "topic": "jobs_career",
           "name": "Jobs & Career 💼",
+          "count": 3
+        },
+        {
+          "topic": "data_science",
+          "name": "Data Science 📊",
           "count": 3
         }
       ],
@@ -3535,7 +3588,7 @@
     },
     "08109137660": {
       "total_messages": 268,
-      "percentile": 7.24,
+      "percentile": 7.23,
       "total_days_active": 58,
       "avg_messages_per_active_day": 4.62,
       "longest_streak_days": 4,
@@ -3559,7 +3612,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 9
+          "count": 10
         },
         {
           "topic": "jobs_career",
@@ -3684,7 +3737,7 @@
     },
     "07059822507": {
       "total_messages": 1869,
-      "percentile": 50.51,
+      "percentile": 50.45,
       "total_days_active": 190,
       "avg_messages_per_active_day": 9.84,
       "longest_streak_days": 20,
@@ -3708,7 +3761,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 152
+          "count": 153
         },
         {
           "topic": "jobs_career",
@@ -4108,7 +4161,7 @@
     },
     "08120805099": {
       "total_messages": 62,
-      "percentile": 1.68,
+      "percentile": 1.67,
       "total_days_active": 30,
       "avg_messages_per_active_day": 2.07,
       "longest_streak_days": 3,
@@ -4132,7 +4185,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 12
+          "count": 13
         },
         {
           "topic": "jobs_career",
@@ -4478,32 +4531,32 @@
       ]
     },
     "Meta AI": {
-      "total_messages": 144,
-      "percentile": 3.89,
-      "total_days_active": 37,
-      "avg_messages_per_active_day": 3.89,
+      "total_messages": 145,
+      "percentile": 3.91,
+      "total_days_active": 38,
+      "avg_messages_per_active_day": 3.82,
       "longest_streak_days": 3,
-      "current_streak_days": 2,
+      "current_streak_days": 1,
       "avg_response_time_minutes": 0.05,
       "weekend_messages": 42,
-      "weekday_messages": 102,
-      "weekend_percentage": 29.17,
+      "weekday_messages": 103,
+      "weekend_percentage": 28.97,
       "early_bird_messages": 25,
       "night_owl_messages": 9,
-      "daytime_messages": 110,
+      "daytime_messages": 111,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 122,
+      "replies_received": 123,
       "conversation_starters": 0,
-      "question_messages": 67,
+      "question_messages": 68,
       "helping_messages": 5,
       "favorite_emoji": "😂",
       "topic_interests": [
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 51
+          "count": 52
         },
         {
           "topic": "help_support",
@@ -4536,6 +4589,7 @@
         }
       ],
       "fun_badges": [
+        "emoji_king",
         "link_sharer",
         "weekend_warrior",
         "quick_responder"
@@ -4576,23 +4630,23 @@
       "fun_badges": []
     },
     "08108469203": {
-      "total_messages": 22,
-      "percentile": 0.59,
+      "total_messages": 23,
+      "percentile": 0.62,
       "total_days_active": 9,
-      "avg_messages_per_active_day": 2.44,
+      "avg_messages_per_active_day": 2.56,
       "longest_streak_days": 2,
       "current_streak_days": 2,
-      "avg_response_time_minutes": 4.0,
+      "avg_response_time_minutes": 3.67,
       "weekend_messages": 2,
-      "weekday_messages": 20,
-      "weekend_percentage": 9.09,
+      "weekday_messages": 21,
+      "weekend_percentage": 8.7,
       "early_bird_messages": 14,
       "night_owl_messages": 1,
-      "daytime_messages": 7,
+      "daytime_messages": 8,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 10,
+      "replies_received": 11,
       "conversation_starters": 5,
       "question_messages": 5,
       "helping_messages": 0,
@@ -4640,13 +4694,13 @@
       "favorite_emoji": "😂",
       "topic_interests": [
         {
-          "topic": "help_support",
-          "name": "Help & Support 🆘",
-          "count": 3
-        },
-        {
           "topic": "data_science",
           "name": "Data Science 📊",
+          "count": 4
+        },
+        {
+          "topic": "help_support",
+          "name": "Help & Support 🆘",
           "count": 3
         }
       ],
@@ -4983,7 +5037,7 @@
         "quick_responder"
       ]
     },
-    "Chrizho": {
+    "07033216285": {
       "total_messages": 106,
       "percentile": 2.86,
       "total_days_active": 19,
@@ -5307,7 +5361,7 @@
     },
     "08189648342": {
       "total_messages": 172,
-      "percentile": 4.65,
+      "percentile": 4.64,
       "total_days_active": 11,
       "avg_messages_per_active_day": 15.64,
       "longest_streak_days": 2,
@@ -5496,7 +5550,7 @@
     },
     "JB": {
       "total_messages": 115,
-      "percentile": 3.11,
+      "percentile": 3.1,
       "total_days_active": 30,
       "avg_messages_per_active_day": 3.83,
       "longest_streak_days": 2,
@@ -5582,7 +5636,7 @@
     },
     "09068890140": {
       "total_messages": 92,
-      "percentile": 2.49,
+      "percentile": 2.48,
       "total_days_active": 21,
       "avg_messages_per_active_day": 4.38,
       "longest_streak_days": 3,
@@ -5677,7 +5731,7 @@
       ],
       "fun_badges": []
     },
-    "CIA Triad": {
+    "08136020460": {
       "total_messages": 13,
       "percentile": 0.35,
       "total_days_active": 6,
@@ -6012,7 +6066,7 @@
     },
     "07048048559": {
       "total_messages": 35,
-      "percentile": 0.95,
+      "percentile": 0.94,
       "total_days_active": 15,
       "avg_messages_per_active_day": 2.33,
       "longest_streak_days": 3,
@@ -6252,7 +6306,7 @@
     },
     "08143886134": {
       "total_messages": 605,
-      "percentile": 16.35,
+      "percentile": 16.33,
       "total_days_active": 68,
       "avg_messages_per_active_day": 8.9,
       "longest_streak_days": 9,
@@ -6394,7 +6448,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 8
+          "count": 9
         },
         {
           "topic": "jobs_career",
@@ -6668,37 +6722,37 @@
       ]
     },
     "09152307875": {
-      "total_messages": 3700,
+      "total_messages": 3705,
       "percentile": 100.0,
       "total_days_active": 255,
-      "avg_messages_per_active_day": 14.51,
+      "avg_messages_per_active_day": 14.53,
       "longest_streak_days": 32,
       "current_streak_days": 6,
       "avg_response_time_minutes": 2.18,
       "weekend_messages": 1239,
-      "weekday_messages": 2461,
-      "weekend_percentage": 33.49,
+      "weekday_messages": 2466,
+      "weekend_percentage": 33.44,
       "early_bird_messages": 463,
-      "night_owl_messages": 915,
-      "daytime_messages": 2322,
+      "night_owl_messages": 917,
+      "daytime_messages": 2325,
       "time_preference": "night_owl",
       "was_first_message": false,
-      "was_last_message": true,
-      "replies_received": 2198,
-      "conversation_starters": 199,
-      "question_messages": 701,
+      "was_last_message": false,
+      "replies_received": 2201,
+      "conversation_starters": 200,
+      "question_messages": 703,
       "helping_messages": 48,
       "favorite_emoji": "😂",
       "topic_interests": [
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 359
+          "count": 373
         },
         {
           "topic": "jobs_career",
           "name": "Jobs & Career 💼",
-          "count": 144
+          "count": 145
         },
         {
           "topic": "help_support",
@@ -6816,7 +6870,7 @@
     },
     "08160101820": {
       "total_messages": 25,
-      "percentile": 0.68,
+      "percentile": 0.67,
       "total_days_active": 14,
       "avg_messages_per_active_day": 1.79,
       "longest_streak_days": 2,
@@ -6891,7 +6945,7 @@
     },
     "08082998285": {
       "total_messages": 122,
-      "percentile": 3.3,
+      "percentile": 3.29,
       "total_days_active": 12,
       "avg_messages_per_active_day": 10.17,
       "longest_streak_days": 2,
@@ -7058,7 +7112,7 @@
     },
     "08140980792": {
       "total_messages": 42,
-      "percentile": 1.14,
+      "percentile": 1.13,
       "total_days_active": 17,
       "avg_messages_per_active_day": 2.47,
       "longest_streak_days": 3,
@@ -7104,23 +7158,23 @@
       ]
     },
     "08115863669": {
-      "total_messages": 90,
-      "percentile": 2.43,
-      "total_days_active": 47,
-      "avg_messages_per_active_day": 1.91,
+      "total_messages": 91,
+      "percentile": 2.46,
+      "total_days_active": 48,
+      "avg_messages_per_active_day": 1.9,
       "longest_streak_days": 5,
       "current_streak_days": 1,
-      "avg_response_time_minutes": 5.56,
+      "avg_response_time_minutes": 5.51,
       "weekend_messages": 34,
-      "weekday_messages": 56,
-      "weekend_percentage": 37.78,
+      "weekday_messages": 57,
+      "weekend_percentage": 37.36,
       "early_bird_messages": 13,
       "night_owl_messages": 7,
-      "daytime_messages": 70,
+      "daytime_messages": 71,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 61,
+      "replies_received": 62,
       "conversation_starters": 15,
       "question_messages": 23,
       "helping_messages": 1,
@@ -7129,7 +7183,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 11
+          "count": 18
         },
         {
           "topic": "web_dev",
@@ -7153,7 +7207,7 @@
     },
     "09037853968": {
       "total_messages": 25,
-      "percentile": 0.68,
+      "percentile": 0.67,
       "total_days_active": 1,
       "avg_messages_per_active_day": 25.0,
       "longest_streak_days": 1,
@@ -7334,7 +7388,7 @@
     },
     "07016199978": {
       "total_messages": 52,
-      "percentile": 1.41,
+      "percentile": 1.4,
       "total_days_active": 4,
       "avg_messages_per_active_day": 13.0,
       "longest_streak_days": 1,
@@ -7697,7 +7751,7 @@
     },
     "09069625266": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 1,
@@ -7783,7 +7837,7 @@
     },
     "08034282626": {
       "total_messages": 192,
-      "percentile": 5.19,
+      "percentile": 5.18,
       "total_days_active": 44,
       "avg_messages_per_active_day": 4.36,
       "longest_streak_days": 3,
@@ -7893,7 +7947,7 @@
     },
     "07059408799": {
       "total_messages": 62,
-      "percentile": 1.68,
+      "percentile": 1.67,
       "total_days_active": 12,
       "avg_messages_per_active_day": 5.17,
       "longest_streak_days": 3,
@@ -7970,6 +8024,11 @@
         {
           "topic": "learning",
           "name": "Learning & Education 📚",
+          "count": 3
+        },
+        {
+          "topic": "data_science",
+          "name": "Data Science 📊",
           "count": 3
         }
       ],
@@ -8111,7 +8170,7 @@
     },
     "08093565406": {
       "total_messages": 72,
-      "percentile": 1.95,
+      "percentile": 1.94,
       "total_days_active": 20,
       "avg_messages_per_active_day": 3.6,
       "longest_streak_days": 3,
@@ -8135,7 +8194,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 6
+          "count": 7
         },
         {
           "topic": "learning",
@@ -8198,7 +8257,7 @@
     },
     "08117612515": {
       "total_messages": 438,
-      "percentile": 11.84,
+      "percentile": 11.82,
       "total_days_active": 93,
       "avg_messages_per_active_day": 4.71,
       "longest_streak_days": 6,
@@ -8222,7 +8281,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 66
+          "count": 68
         },
         {
           "topic": "jobs_career",
@@ -8284,7 +8343,7 @@
     },
     "09133850206": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 3,
       "avg_messages_per_active_day": 1.67,
       "longest_streak_days": 1,
@@ -8467,7 +8526,7 @@
     },
     "09087091927": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 5,
       "avg_messages_per_active_day": 1.0,
       "longest_streak_days": 1,
@@ -8642,7 +8701,7 @@
     },
     "09150309346": {
       "total_messages": 232,
-      "percentile": 6.27,
+      "percentile": 6.26,
       "total_days_active": 83,
       "avg_messages_per_active_day": 2.8,
       "longest_streak_days": 9,
@@ -9273,7 +9332,7 @@
     },
     "09033664966": {
       "total_messages": 72,
-      "percentile": 1.95,
+      "percentile": 1.94,
       "total_days_active": 19,
       "avg_messages_per_active_day": 3.79,
       "longest_streak_days": 2,
@@ -9450,7 +9509,7 @@
     },
     "09048625571": {
       "total_messages": 135,
-      "percentile": 3.65,
+      "percentile": 3.64,
       "total_days_active": 23,
       "avg_messages_per_active_day": 5.87,
       "longest_streak_days": 2,
@@ -9543,7 +9602,7 @@
     },
     "08171371344": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 1,
@@ -9973,7 +10032,7 @@
     },
     "08023085321": {
       "total_messages": 332,
-      "percentile": 8.97,
+      "percentile": 8.96,
       "total_days_active": 87,
       "avg_messages_per_active_day": 3.82,
       "longest_streak_days": 5,
@@ -9997,7 +10056,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 35
+          "count": 36
         },
         {
           "topic": "help_support",
@@ -10124,7 +10183,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 4
+          "count": 5
         }
       ],
       "activity_level": "very_active",
@@ -10237,7 +10296,7 @@
     },
     "08151040016": {
       "total_messages": 291,
-      "percentile": 7.86,
+      "percentile": 7.85,
       "total_days_active": 23,
       "avg_messages_per_active_day": 12.65,
       "longest_streak_days": 4,
@@ -10261,7 +10320,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 39
+          "count": 40
         },
         {
           "topic": "learning",
@@ -10304,9 +10363,9 @@
         "quick_responder"
       ]
     },
-    "< Tech With Dunamix />": {
+    "08119730652": {
       "total_messages": 85,
-      "percentile": 2.3,
+      "percentile": 2.29,
       "total_days_active": 39,
       "avg_messages_per_active_day": 2.18,
       "longest_streak_days": 5,
@@ -10582,7 +10641,7 @@
     },
     "09075410876": {
       "total_messages": 72,
-      "percentile": 1.95,
+      "percentile": 1.94,
       "total_days_active": 14,
       "avg_messages_per_active_day": 5.14,
       "longest_streak_days": 4,
@@ -10667,7 +10726,7 @@
     },
     "08162092523": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 3,
       "avg_messages_per_active_day": 1.67,
       "longest_streak_days": 2,
@@ -10954,7 +11013,7 @@
     },
     "08108149127": {
       "total_messages": 25,
-      "percentile": 0.68,
+      "percentile": 0.67,
       "total_days_active": 8,
       "avg_messages_per_active_day": 3.12,
       "longest_streak_days": 1,
@@ -11198,7 +11257,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 4
+          "count": 5
         }
       ],
       "activity_level": "occasional",
@@ -11257,7 +11316,7 @@
     },
     "Kaytech": {
       "total_messages": 15,
-      "percentile": 0.41,
+      "percentile": 0.4,
       "total_days_active": 6,
       "avg_messages_per_active_day": 2.5,
       "longest_streak_days": 2,
@@ -11291,7 +11350,7 @@
         "quick_responder"
       ]
     },
-    "OMA—B": {
+    "09056198240": {
       "total_messages": 104,
       "percentile": 2.81,
       "total_days_active": 18,
@@ -11645,7 +11704,7 @@
     },
     "08114452980": {
       "total_messages": 126,
-      "percentile": 3.41,
+      "percentile": 3.4,
       "total_days_active": 31,
       "avg_messages_per_active_day": 4.06,
       "longest_streak_days": 4,
@@ -11705,7 +11764,7 @@
     },
     "07041259831": {
       "total_messages": 89,
-      "percentile": 2.41,
+      "percentile": 2.4,
       "total_days_active": 18,
       "avg_messages_per_active_day": 4.94,
       "longest_streak_days": 3,
@@ -11846,7 +11905,7 @@
     },
     "09016739854": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 1,
@@ -11925,7 +11984,7 @@
         "quick_responder"
       ]
     },
-    "Ekele Great Python": {
+    "09021971152": {
       "total_messages": 2,
       "percentile": 0.05,
       "total_days_active": 1,
@@ -12040,7 +12099,7 @@
     },
     "Kemzzy": {
       "total_messages": 241,
-      "percentile": 6.51,
+      "percentile": 6.5,
       "total_days_active": 32,
       "avg_messages_per_active_day": 7.53,
       "longest_streak_days": 2,
@@ -12069,7 +12128,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 7
+          "count": 9
         },
         {
           "topic": "help_support",
@@ -12264,14 +12323,14 @@
       "favorite_emoji": "😂",
       "topic_interests": [
         {
-          "topic": "data_science",
-          "name": "Data Science 📊",
-          "count": 4
-        },
-        {
           "topic": "business_startup",
           "name": "Business & Startups 🚀",
           "count": 4
+        },
+        {
+          "topic": "data_science",
+          "name": "Data Science 📊",
+          "count": 3
         }
       ],
       "activity_level": "regular",
@@ -12790,7 +12849,7 @@
     },
     "07083837419": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 3,
       "avg_messages_per_active_day": 1.67,
       "longest_streak_days": 1,
@@ -13049,7 +13108,7 @@
     },
     "07065184789": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 1,
@@ -13932,7 +13991,7 @@
       ],
       "fun_badges": []
     },
-    "Horlar Django ✌️": {
+    "09034767600": {
       "total_messages": 3,
       "percentile": 0.08,
       "total_days_active": 2,
@@ -14522,7 +14581,7 @@
     },
     "07066653871": {
       "total_messages": 15,
-      "percentile": 0.41,
+      "percentile": 0.4,
       "total_days_active": 6,
       "avg_messages_per_active_day": 2.5,
       "longest_streak_days": 1,
@@ -14716,7 +14775,7 @@
     },
     "08115812801": {
       "total_messages": 35,
-      "percentile": 0.95,
+      "percentile": 0.94,
       "total_days_active": 14,
       "avg_messages_per_active_day": 2.5,
       "longest_streak_days": 1,
@@ -15165,7 +15224,7 @@
     },
     "07068002386": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 5,
       "avg_messages_per_active_day": 1.0,
       "longest_streak_days": 2,
@@ -15233,7 +15292,7 @@
     },
     "08105305246": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 1,
@@ -15301,7 +15360,7 @@
         "quick_responder"
       ]
     },
-    "Tech_princess#Chocolate 🍫": {
+    "09039842407": {
       "total_messages": 38,
       "percentile": 1.03,
       "total_days_active": 13,
@@ -15476,7 +15535,7 @@
     },
     "08136212795": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 3,
       "avg_messages_per_active_day": 1.67,
       "longest_streak_days": 1,
@@ -15510,7 +15569,7 @@
     },
     "+254 717 684188": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 2,
@@ -15550,7 +15609,7 @@
     },
     "07043830914": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 2,
@@ -16742,23 +16801,23 @@
       ]
     },
     "08036619604": {
-      "total_messages": 7,
-      "percentile": 0.19,
-      "total_days_active": 5,
-      "avg_messages_per_active_day": 1.4,
+      "total_messages": 9,
+      "percentile": 0.24,
+      "total_days_active": 6,
+      "avg_messages_per_active_day": 1.5,
       "longest_streak_days": 2,
       "current_streak_days": 1,
-      "avg_response_time_minutes": 9.25,
+      "avg_response_time_minutes": 7.0,
       "weekend_messages": 0,
-      "weekday_messages": 7,
+      "weekday_messages": 9,
       "weekend_percentage": 0.0,
       "early_bird_messages": 2,
       "night_owl_messages": 0,
-      "daytime_messages": 5,
+      "daytime_messages": 7,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 7,
+      "replies_received": 9,
       "conversation_starters": 3,
       "question_messages": 1,
       "helping_messages": 0,
@@ -17271,7 +17330,7 @@
     },
     "08082989696": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 1,
       "avg_messages_per_active_day": 5.0,
       "longest_streak_days": 1,
@@ -17401,7 +17460,7 @@
     },
     "08034023726": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 3,
       "avg_messages_per_active_day": 1.67,
       "longest_streak_days": 3,
@@ -17657,7 +17716,7 @@
     },
     "08136850287": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 2,
       "avg_messages_per_active_day": 2.5,
       "longest_streak_days": 1,
@@ -17773,7 +17832,7 @@
     },
     "07056537315": {
       "total_messages": 79,
-      "percentile": 2.14,
+      "percentile": 2.13,
       "total_days_active": 9,
       "avg_messages_per_active_day": 8.78,
       "longest_streak_days": 2,
@@ -18155,7 +18214,7 @@
     },
     "07035188572": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 2,
       "avg_messages_per_active_day": 2.5,
       "longest_streak_days": 1,
@@ -18859,7 +18918,7 @@
         "quick_responder"
       ]
     },
-    "Ada-Ihueze pinned a message": {
+    "~ AdaIhueze pinned a message": {
       "total_messages": 1,
       "percentile": 0.03,
       "total_days_active": 1,
@@ -18901,24 +18960,24 @@
       ]
     },
     "08105654558": {
-      "total_messages": 296,
-      "percentile": 8.0,
+      "total_messages": 297,
+      "percentile": 8.02,
       "total_days_active": 74,
-      "avg_messages_per_active_day": 4.0,
+      "avg_messages_per_active_day": 4.01,
       "longest_streak_days": 8,
       "current_streak_days": 7,
       "avg_response_time_minutes": 4.25,
       "weekend_messages": 75,
-      "weekday_messages": 221,
-      "weekend_percentage": 25.34,
+      "weekday_messages": 222,
+      "weekend_percentage": 25.25,
       "early_bird_messages": 85,
       "night_owl_messages": 65,
-      "daytime_messages": 146,
+      "daytime_messages": 147,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
       "replies_received": 155,
-      "conversation_starters": 77,
+      "conversation_starters": 78,
       "question_messages": 52,
       "helping_messages": 3,
       "favorite_emoji": "😀",
@@ -18926,7 +18985,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 24
+          "count": 25
         },
         {
           "topic": "help_support",
@@ -19367,7 +19426,7 @@
     },
     "08062062303": {
       "total_messages": 25,
-      "percentile": 0.68,
+      "percentile": 0.67,
       "total_days_active": 12,
       "avg_messages_per_active_day": 2.08,
       "longest_streak_days": 5,
@@ -19391,7 +19450,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 3
+          "count": 4
         },
         {
           "topic": "jobs_career",
@@ -19712,7 +19771,7 @@
     },
     "09036907178": {
       "total_messages": 75,
-      "percentile": 2.03,
+      "percentile": 2.02,
       "total_days_active": 11,
       "avg_messages_per_active_day": 6.82,
       "longest_streak_days": 1,
@@ -20815,7 +20874,7 @@
     },
     "08129917445": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 2,
       "avg_messages_per_active_day": 2.5,
       "longest_streak_days": 1,
@@ -20849,7 +20908,7 @@
     },
     "09044073574": {
       "total_messages": 15,
-      "percentile": 0.41,
+      "percentile": 0.4,
       "total_days_active": 9,
       "avg_messages_per_active_day": 1.67,
       "longest_streak_days": 2,
@@ -21007,7 +21066,7 @@
     },
     "08112017023": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 4,
       "avg_messages_per_active_day": 1.25,
       "longest_streak_days": 1,
@@ -21229,7 +21288,7 @@
     },
     "07011694141": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 1,
       "avg_messages_per_active_day": 5.0,
       "longest_streak_days": 1,
@@ -21365,7 +21424,7 @@
     },
     "08169919049": {
       "total_messages": 65,
-      "percentile": 1.76,
+      "percentile": 1.75,
       "total_days_active": 19,
       "avg_messages_per_active_day": 3.42,
       "longest_streak_days": 3,
@@ -21389,7 +21448,7 @@
         {
           "topic": "data_science",
           "name": "Data Science 📊",
-          "count": 11
+          "count": 12
         },
         {
           "topic": "help_support",
@@ -21775,7 +21834,7 @@
     },
     "09077083996": {
       "total_messages": 5,
-      "percentile": 0.14,
+      "percentile": 0.13,
       "total_days_active": 1,
       "avg_messages_per_active_day": 5.0,
       "longest_streak_days": 1,
@@ -22547,23 +22606,23 @@
       ]
     },
     "09161591177": {
-      "total_messages": 13,
-      "percentile": 0.35,
+      "total_messages": 19,
+      "percentile": 0.51,
       "total_days_active": 6,
-      "avg_messages_per_active_day": 2.17,
+      "avg_messages_per_active_day": 3.17,
       "longest_streak_days": 1,
       "current_streak_days": 1,
-      "avg_response_time_minutes": 4.11,
+      "avg_response_time_minutes": 3.91,
       "weekend_messages": 0,
-      "weekday_messages": 13,
+      "weekday_messages": 19,
       "weekend_percentage": 0.0,
       "early_bird_messages": 5,
       "night_owl_messages": 0,
-      "daytime_messages": 8,
+      "daytime_messages": 14,
       "time_preference": "early_bird",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 9,
+      "replies_received": 10,
       "conversation_starters": 2,
       "question_messages": 3,
       "helping_messages": 0,
@@ -23517,46 +23576,46 @@
       ]
     },
     "09027209415": {
-      "total_messages": 27,
-      "percentile": 0.73,
+      "total_messages": 30,
+      "percentile": 0.81,
       "total_days_active": 6,
-      "avg_messages_per_active_day": 4.5,
+      "avg_messages_per_active_day": 5.0,
       "longest_streak_days": 6,
       "current_streak_days": 6,
-      "avg_response_time_minutes": 4.88,
+      "avg_response_time_minutes": 6.0,
       "weekend_messages": 1,
-      "weekday_messages": 26,
-      "weekend_percentage": 3.7,
+      "weekday_messages": 29,
+      "weekend_percentage": 3.33,
       "early_bird_messages": 5,
       "night_owl_messages": 11,
-      "daytime_messages": 11,
+      "daytime_messages": 14,
       "time_preference": "night_owl",
       "was_first_message": false,
       "was_last_message": false,
-      "replies_received": 18,
-      "conversation_starters": 4,
-      "question_messages": 6,
+      "replies_received": 20,
+      "conversation_starters": 5,
+      "question_messages": 7,
       "helping_messages": 0,
       "favorite_emoji": "😂",
-      "topic_interests": [],
+      "topic_interests": [
+        {
+          "topic": "data_science",
+          "name": "Data Science 📊",
+          "count": 3
+        }
+      ],
       "activity_level": "occasional",
       "activity_title": "Occasional Visitor 🌙",
       "user_roles": [
         {
-          "role": "night_owl",
-          "title": "Night Owl 🦉",
-          "description": "Owns the late-night shift"
-        },
-        {
-          "role": "quick_response",
-          "title": "Lightning Responder ⚡",
-          "description": "Fastest fingers in the group"
+          "role": "observer",
+          "title": "Thoughtful Observer 👁️",
+          "description": "Quality over quantity"
         }
       ],
       "fun_badges": [
         "media_master",
-        "night_owl",
-        "quick_responder"
+        "night_owl"
       ]
     },
     "07064157415": {
