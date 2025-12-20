@@ -18,6 +18,5 @@
   },
   "devDependencies": {
     "js-cookie": "^3.0.5",
-    "motion": "^11.13.1"
   }
 }

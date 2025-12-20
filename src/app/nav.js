@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import {animate,motion , useScroll, useMotionValueEvent} from "motion/react";
+//import {animate,motion , useScroll, useMotionValueEvent} from "motion/react";
 import { useRouter ,useSearchParams,usePathname } from 'next/navigation'
 import Link from "next/link"
 
@@ -9,7 +9,6 @@ export default function Nav(){
 	const excludedPath= ["/account/signup"]
 	const [isScrolled,setIsScrolled]= React.useState(false)
 	const [dropdown , showDrop] = React.useState(false)
-	const {scrollY} = useScroll()
 	const animateClass = `${isScrolled ? "color-bg-white color-black shadow-sm" : "color-bg-white color-black"}`
 
 	React.useEffect(()=>{
