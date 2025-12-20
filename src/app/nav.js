@@ -1,6 +1,5 @@
 "use client"
 import React from "react";
-//import {animate,motion , useScroll, useMotionValueEvent} from "motion/react";
 import { useRouter ,useSearchParams,usePathname } from 'next/navigation'
 import Link from "next/link"
 
