@@ -100,6 +100,30 @@ function IndividualWrap({data, onBack}){
 	const userName = data.user
 
 	const audioRef = useRef(null)
+	// Add this right after your existing state declarations
+const [quizAnswers, setQuizAnswers] = useState({
+  mostActive: null,
+  groupName: null,
+  oS : null,
+})
+
+const [showQuizResult, setShowQuizResult] = useState({
+  mostActive: false,
+  groupName: false,
+  oS : false,
+  
+})
+
+const handleQuizAnswer = (quizType, answer, correctAnswer) => {
+  setQuizAnswers(prev => ({...prev, [quizType]: answer}))
+  setShowQuizResult(prev => ({...prev, [quizType]: true}))
+  
+  // Auto-advance after showing result (3 seconds)
+  setTimeout(() => {
+    nextPage()
+    setShowQuizResult(prev => ({...prev, [quizType]: false}))
+  }, 3000)
+}
 	
 	React.useEffect(()=>{
 		if (!audioRef.current) {
@@ -248,6 +272,49 @@ function IndividualWrap({data, onBack}){
 				</div>
 			)
 		},
+		
+				{
+  gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  content: (
+    <div className="text-center text-white">
+      {!showQuizResult.oS ? (
+        <>
+          <h2 className="fs-3 mb-4"> Before we continue </h2>
+          <p className="fs-4 mb-5">Pick a side 🤧</p>
+          <div className="d-flex flex-column gap-3">
+            {['Windows', 'Linux'].map((name, idx) => (
+              <button 
+                key={idx}
+                className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
+                style={{animationDelay: `${idx * 0.1}s`}}
+                onClick={() => handleQuizAnswer('oS', name, 'Python Nigeria')}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="animate__animated animate__zoomIn">
+          {quizAnswers.oS === 'Windows' ? (
+            <>
+              <div className="mb-4" style={{fontSize: '6rem'}}>🎊</div>
+              <h2 className="fs-2 mb-3">Windows!</h2>
+              <p className="fs-4"> You’re officially a legend 🏆</p>
+            </>
+          ) : (
+            <>
+              <div className="mb-4" style={{fontSize: '6rem'}}> 🥺🥺 </div>
+              <h2 className="fs-2 mb-3">Linux!</h2>
+              <p className="fs-4">Poor soul<strong></strong></p>
+              <p className="fs-6 opacity-75 mt-3">May God lead you to the right path ! 😊</p>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  )
+},
 
 		// NEW: Community Comparison
 		{
@@ -587,6 +654,47 @@ function IndividualWrap({data, onBack}){
 				</div>
 			)
 		},
+		{
+  gradient: 'linear-gradient(135deg, #ee0979 0%, #ff6a00 100%)',
+  content: (
+    <div className="text-center text-white">
+      {!showQuizResult.mostActive ? (
+        <>
+          <h2 className="fs-3 mb-4">Quick Quiz! 🤔</h2>
+          <p className="fs-4 mb-5">Who do you think was the most active member this year?</p>
+          <div className="d-flex flex-column gap-3">
+            {['Ebulamicheal', 'Ada Ihueze', 'New Genesis', 'Mario Caleb',"Chukwuebuka"].map((name, idx) => (
+              <button 
+                key={idx}
+                className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
+                style={{animationDelay: `${idx * 0.1}s`}}
+                onClick={() => handleQuizAnswer('mostActive', name, 'New Genesis')}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="animate__animated animate__zoomIn">
+          {quizAnswers.mostActive === 'New Genesis' ? (
+            <>
+              <div className="mb-4" style={{fontSize: '6rem'}}>🎉</div>
+              <h2 className="fs-2 mb-3">Correct!</h2>
+              <p className="fs-4">You know your group well! 👏</p>
+            </>
+          ) : (
+            <>
+              <div className="mb-4" style={{fontSize: '6rem'}}>😅</div>
+              <h2 className="fs-2 mb-3">Nice try!</h2>
+              <p className="fs-4">It was actually <strong>New Genesis</strong></p>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  )
+},
 
 		// NEW: Top Members Leaderboard
 		{
@@ -600,7 +708,13 @@ function IndividualWrap({data, onBack}){
 						The most active members of 2024
 					</p>
 					<div className="d-flex flex-column gap-3">
-						{yearInfo.community?.top_members?.slice(0, 5).map((member, idx) => (
+						{[
+  { name: "New Genesis", message: "3705", userName: "09152307875" },
+  { name: "Chukwuebuka", message: "3608", userName: "08073194769" },
+  { name: "Ada Ihueze", message: "3404", userName: "Ada Ihueze" },
+  { name: "Mario Caleb", message: "1869", userName: "07059822507" },
+  { name: "Loulou🙄", message: "1809", userName: "Loulou🙄" }
+].map((member, idx) => (
 							<div 
 								key={idx} 
 								className="bg-white bg-opacity-25 rounded-4 p-3"
@@ -614,8 +728,8 @@ function IndividualWrap({data, onBack}){
 											{idx > 2 && `${idx + 1}.`}
 										</div>
 										<div className="text-start">
-											<div className="fw-bold">{member.name === userName ? 'You! 🎉' : member.name}</div>
-											<div className="fs-6 opacity-75">{member.messages.toLocaleString()} messages</div>
+											<div className="fw-bold">{member.userName === userName ? 'You! 🎉' : member.name}</div>
+											<div className="fs-6 opacity-75">{member.message} messages</div>
 										</div>
 									</div>
 									{member.name === userName && (
@@ -647,14 +761,57 @@ function IndividualWrap({data, onBack}){
 						{stats.activity_level === 'very_active' && "A reliable presence in the group! ⚡"}
 						{stats.activity_level === 'active' && "Great to have you around! 👍"}
 						{stats.activity_level === 'regular' && "You show up when it matters! 💬"}
-						{stats.activity_level === 'occasional' && "We love your occasional visits! 🌙"}
-						{stats.activity_level === 'lurker' && "The silent watcher! 👀"}
-						{stats.activity_level === 'ghost' && "Mystery member! 👻"}
-						{stats.activity_level === 'rare_sighting' && "A rare gem! 🦄"}
+						{stats.activity_level === 'occasional' && "Member by faith, not by activity 🌙"}
+						{stats.activity_level === 'lurker' && " Rumored to exist 👀"}
+						{stats.activity_level === 'ghost' && "Survived the cleanup. For now 👻"}
+						{stats.activity_level === 'rare_sighting' && "One message away from extinction.🦄"}
 					</p>
 				</div>
 			)
 		},
+		
+		{
+  gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+  content: (
+    <div className="text-center text-white">
+      {!showQuizResult.groupName ? (
+        <>
+          <h2 className="fs-3 mb-4">Final Quiz! 🧠</h2>
+          <p className="fs-4 mb-5">What was Python 9ja previously called?</p>
+          <div className="d-flex flex-column gap-3">
+            {['Python Nigeria', 'Naija Python', 'Python Devs NG', '9ja Coders'].map((name, idx) => (
+              <button 
+                key={idx}
+                className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
+                style={{animationDelay: `${idx * 0.1}s`}}
+                onClick={() => handleQuizAnswer('groupName', name, 'Python Nigeria')}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        </>
+      ) : (
+        <div className="animate__animated animate__zoomIn">
+          {quizAnswers.groupName === 'Python Nigeria' ? (
+            <>
+              <div className="mb-4" style={{fontSize: '6rem'}}>🎊</div>
+              <h2 className="fs-2 mb-3">Perfect!</h2>
+              <p className="fs-4">You've been here since the beginning! 🏆</p>
+            </>
+          ) : (
+            <>
+              <div className="mb-4" style={{fontSize: '6rem'}}>📚</div>
+              <h2 className="fs-2 mb-3">Oops!</h2>
+              <p className="fs-4">It was <strong>Python Nigeria</strong></p>
+              <p className="fs-6 opacity-75 mt-3">Now you know! 😊</p>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  )
+},
 
 		// Closing page
 		{
@@ -684,7 +841,7 @@ function IndividualWrap({data, onBack}){
 			style={{
 				background: pages[currentPage].gradient,
 				zIndex: 9999,
-				transition: 'background 0.5s ease'
+				transition: 'background 0.5s ease',overflow:'auto'
 			}}
 		>
 			{/* Progress bar */}
@@ -711,7 +868,7 @@ function IndividualWrap({data, onBack}){
 			</div>
 
 			{/* User name */}
-			<div className="position-absolute top-0 start-0 w-100 text-center pt-5 mt-4">
+			<div className="position-absolue top-0 start-0 w-100 text-center pt-5 mt-4">
 				<h3 className="text-white fw-bold animate__animated animate__fadeIn">{userName}</h3>
 			</div>
 
