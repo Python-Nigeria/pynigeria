@@ -1018,7 +1018,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			<div className="position-fixed bottom-0 start-0 w-100 p-4">
 				<div className="d-flex justify-content-between">
 					<button 
-						className="button color-bg-white-focus color-s-focus rounded-circle"
+						className="btn btn-light color-bg-white-focus color-s-focus rounded-circle"
 						style={{width: '60px', height: '60px'}}
 						onClick={prevPage}
 						disabled={currentPage === 0}
@@ -1026,7 +1026,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 						<i className="fas fa-arrow-left"></i>
 					</button>
 					<button 
-						className="button color-bg-white-focus color-s-focus rounded-circle"
+						className="btn btn-light color-bg-white-focus color-s-focus rounded-circle"
 						style={{width: '60px', height: '60px'}}
 						onClick={nextPage}
 						disabled={currentPage === pages.length - 1}
