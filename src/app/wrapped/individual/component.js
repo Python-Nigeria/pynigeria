@@ -94,7 +94,7 @@ export default function InputWrapp(){
 function IndividualWrap({data, onBack}){
 	const [currentPage, setCurrentPage] = useState(0)
 	const [progress, setProgress] = useState(0)
-	
+	const [backgroundMusic, setBackgroundMusic] = React.useState()
 	const stats = data.stats
 	const yearInfo = data.yearInfo
 	const userName = data.user
@@ -125,20 +125,20 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
   }, 3000)
 }
 	
-	React.useEffect(()=>{
-		if (!audioRef.current) {
-			audioRef.current = new Audio("/wrap.mp3")
-			audioRef.current.loop = true
-		}
-		audioRef.current.play()
+// 	React.useEffect(()=>{
+// 		if (!audioRef.current) {
+// 			audioRef.current = new Audio("/wrap.mp3")
+// 			audioRef.current.loop = true
+// 		}
+// 		audioRef.current.play()
 		
-		return () => {
-			if (audioRef.current) {
-				audioRef.current.pause()
-				audioRef.current.currentTime = 0
-			}
-		}
-	},[])
+// 		return () => {
+// 			if (audioRef.current) {
+// 				audioRef.current.pause()
+// 				audioRef.current.currentTime = 0
+// 			}
+// 		}
+// 	},[])
 
 	const nextPage = () => {
 		if (currentPage < pages.length - 1) {
@@ -153,6 +153,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			setProgress(0)
 		}
 	}
+	
 	
 	
 
@@ -190,6 +191,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 	const pages = [
 		// Welcome page
 		{
+		  track: "/track/ibiza.mp3",
 			gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
 			content: (
 				<div className="text-center text-white">
@@ -223,6 +225,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 
 		// NEW: Community Overview
 		{
+		  track: "/track/hippop.mp3",
 			gradient: 'linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)',
 			content: (
 				<div className="text-center text-white">
@@ -351,6 +354,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 		
 		
 						{
+						  track: "/track/onAndon.mp3",
 			gradient: 'linear-gradient(135deg, #9d50bb 0%, #6e48aa 100%)',
 			content: (
 				<div className="text-center text-white">
@@ -784,6 +788,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			)
 		},
 		{
+	track: "/track/phonk.mp3",
   gradient: 'linear-gradient(135deg, #ee0979 0%, #ff6a00 100%)',
   content: (
     <div className="text-center text-white" style={{zIndex:'20000000'}}>
@@ -937,6 +942,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 //   )
 // },
     		{
+    		  track: "/track/stars.mp3",
 			gradient: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
 			content: (
 				<div className="text-center text-white">
@@ -1002,6 +1008,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			<div className="top-0 start-0 w-100 text-center pt-5 mt-2">
 				<h3 className="text-white fw-bold">{userName}</h3>
 			</div>
+			<audio src={pages[currentPage]?.track} autoplay="true" loop="true"></audio>
 
 			{/* Content - KEY PROP FORCES RE-RENDER AND RESTARTS ANIMATIONS */}
 			<div key={currentPage} className="flex-grow-1 d-flex align-items-center justify-content-center p-3">
