@@ -49,9 +49,9 @@ export default function InputWrapp(){
 				<div className="row justify-content-center">
 					<div className="col-12 col-md-6">
 						<div className="shadow-lg border-0 rounded-4">
-							<div className="p-5">
-								<p className="text-center text-mutd mb-4 color-white hide">
-									Enter your name as it appears in the WhatsApp chat
+							<div className="p-2">
+								<p className="text-center text-mute mb-4 color-grey sz-14">
+									Please remove space from number
 								</p>
 								
 								<input 
@@ -153,7 +153,39 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			setProgress(0)
 		}
 	}
-  
+	
+	
+
+// useEffect(() => {
+// 		const timer = setInterval(() => {
+// 			setProgress(prev => {
+// 				if (prev >= 100) {
+// 					if (currentPage < pages.length - 1) {
+// 						setCurrentPage(p => p + 1)
+// 						return 0
+// 					}
+// 					return 100
+// 				}
+// 				return prev + 2
+// 			})
+// 		}, 100)
+		
+// 		return () => clearInterval(timer)
+// 	}, [currentPage])
+
+// 	const nextPage = () => {
+// 		if (currentPage < pages.length - 1) {
+// 			setCurrentPage(prev => prev + 1)
+// 			setProgress(0)
+// 		}
+// 	}
+
+// 	const prevPage = () => {
+// 		if (currentPage > 0) {
+// 			setCurrentPage(prev => prev - 1)
+// 			setProgress(0)
+// 		}
+// 	}
   
 	const pages = [
 		// Welcome page
@@ -175,11 +207,15 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
 			content: (
 				<div className="text-center text-white">
-					<h1 className="disply-5 sz-20 fw-bold mb-4">
-						Before we continue, let's take a quick look at the group's raw output this year.
+					<h1 className="disply-5 sz-30 fw-bold mb-2">
+					  Before we proceed,
+					  <br /> 
+					  <br />
+					  <img src="/logo.svg" class="img-fluid" style={{height:'100px',width:'auto'}}/> <br />
+						
 					</h1>
-					<p className="fs-5">
-					 😎😎
+					<p className="fs-5 mt-2">
+					Let talk about our community 😎😎
 					</p>
 				</div>
 			)
@@ -200,25 +236,119 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 								<div className="fs-6 color-black">Total Messages</div>
 							</div>
 						</div>
-						<div className="col-6">
+						<div className="col-12">
 							<div className="bg-white bg-opacity-25 rounded-4 p-4">
 								<div className="sz-48 fw-bold">{yearInfo.community?.active_members || 'N/A'}</div>
 								<div className="fs-6 color-black">Active Members</div>
 							</div>
 						</div>
+					<p className="fs-6 opacity-75 mt-4">
+						That was impressive 🔥🔥
+					</p>
+				</div>
+				</div>
+			)
+		},
+				{
+			gradient: 'linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h2 className="fs-2 mb-4 bold">
+						2025 was great with Numbers 👏 !!
+					</h2>
+					<div className="row g-3">
 						<div className="col-6">
 							<div className="bg-white bg-opacity-25 rounded-4 p-4">
-								<div className="sz-16 color-black">Busiest Day</div>
-								<div className="fs-5 fw-bold">{yearInfo.community?.busiest_day || 'N/A'}</div>
+								<div className="sz-24 fw-bold">6598</div>
+								<div className="fs-6 color-black">Total Files Sent</div>
+							</div>
+						</div>
+						<div className="col-6">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-24 fw-bold">10973</div>
+								<div className="fs-6 color-black">Total Emojis 😂 </div>
+							</div>
+						</div>
+						<div className="col-6">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-16 color-black">Links</div>
+								<div className="fs-5 fw-bold">752</div>
+							</div>
+						</div>
+						<div className="col-6">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-16 color-black">Words</div>
+								<div className="fs-5 fw-bold">335678</div>
 							</div>
 						</div>
 					</div>
-					<p className="fs-6 opacity-75 mt-4">
-						
+					<p className="fs-6 oacity-75 mt-4">
+						<span class="bold">Chukwuebuka</span> sent most files , links and emojis by the way 
 					</p>
 				</div>
 			)
 		},
+		
+					{
+			gradient: 'linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h2 className="fs-2 mb-4 bold">
+						Activity Pattern !!
+					</h2>
+					<div className="row g-3">
+						<div className="col-6">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-20 fw-bold">Tuesday (7486) </div>
+								<div className="sz-14 color-black">Day with most Messages </div>
+							</div>
+						</div>
+						<div className="col-6">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-20 fw-bold">9am (5979)</div>
+								<div className="sz-14 color-black">Time with most Messages </div>
+							</div>
+						</div>
+						<div className="col">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+							  <div className="sz-20 fw-bold">January</div>
+								<div className="sz-14 color-black">Month with most messages </div>
+								
+							</div>
+						</div>
+						<div className="col-6 hide">
+							<div className="bg-white bg-opacity-25 rounded-4 p-4">
+								<div className="sz-16 color-black">Words</div>
+								<div className="fs-5 fw-bold">335678</div>
+							</div>
+						</div>
+					</div>
+					<p className="fs-6 oacity-75 mt-4">
+						<span class="bold"></span> 
+					</p>
+				</div>
+			)
+		},
+		
+		{
+			gradient: 'linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h2 className="fs-2 mb-4 bold">
+						Most used Major Words!!
+					</h2>
+					<div class="sz-48 text-success">Work</div>
+					<div class="sz-36 text-warning">Money</div>
+					<div class="sz-30 text-primary">Boss</div>
+					<div class="sz-24 text-danger">People</div>
+					<p className="fs-6 opacity-75 mt-4">
+						<span class=""> People really locked in this year !! </span> 
+					</p>
+				</div>
+			)
+		},
+		
+		
 		
 						{
 			gradient: 'linear-gradient(135deg, #9d50bb 0%, #6e48aa 100%)',
@@ -244,12 +374,12 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 					<div className="mb-4">
 						<i className="fas fa-comments" style={{fontSize: '5rem'}}></i>
 					</div>
-					<h2 className="sz-24 mb-3 hide">Your thumbs worked overtime!</h2>
+					<h2 className="sz-24 mb-3">Your thumbs worked overtime!</h2>
 					<div className="displa-1 fw-bold sz-60 mb-3 color-black">
 						{stats.total_messages.toLocaleString()}
 					</div>
 					<p className="fs-4">messages sent!!!</p>
-					<p className="fs-6 mt-3 opacity-90">
+					<p className="fs-6 mt-3 opacity-90 bold">
 						Active for {stats.total_days_active} days • Avg {stats.avg_messages_per_active_day} msgs/day
 					</p>
 				</div>
@@ -273,48 +403,48 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			)
 		},
 		
-				{
-  gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-  content: (
-    <div className="text-center text-white">
-      {!showQuizResult.oS ? (
-        <>
-          <h2 className="fs-3 mb-4"> Before we continue </h2>
-          <p className="fs-4 mb-5">Pick a side 🤧</p>
-          <div className="d-flex flex-column gap-3">
-            {['Windows', 'Linux'].map((name, idx) => (
-              <button 
-                key={idx}
-                className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
-                style={{animationDelay: `${idx * 0.1}s`}}
-                onClick={() => handleQuizAnswer('oS', name, 'Python Nigeria')}
-              >
-                {name}
-              </button>
-            ))}
-          </div>
-        </>
-      ) : (
-        <div className="animate__animated animate__zoomIn">
-          {quizAnswers.oS === 'Windows' ? (
-            <>
-              <div className="mb-4" style={{fontSize: '6rem'}}>🎊</div>
-              <h2 className="fs-2 mb-3">Windows!</h2>
-              <p className="fs-4"> You’re officially a legend 🏆</p>
-            </>
-          ) : (
-            <>
-              <div className="mb-4" style={{fontSize: '6rem'}}> 🥺🥺 </div>
-              <h2 className="fs-2 mb-3">Linux!</h2>
-              <p className="fs-4">Poor soul<strong></strong></p>
-              <p className="fs-6 opacity-75 mt-3">May God lead you to the right path ! 😊</p>
-            </>
-          )}
-        </div>
-      )}
-    </div>
-  )
-},
+// 				{
+//   gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+//   content: (
+//     <div className="text-center text-white" style={{zIndex:'20000000'}}>
+//       {!showQuizResult.oS ? (
+//         <>
+//           <h2 className="fs-3 mb-4"> </h2>
+//           <p className="fs-4 mb-5">Pick a side 🤧</p>
+//           <div className="d-flex flex-column gap-3">
+//             {['Windows', 'Linux'].map((name, idx) => (
+//               <button 
+//                 key={idx}
+//                 className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
+//                 style={{animationDelay: `${idx * 0.1}s`}}
+//                 onClick={() => handleQuizAnswer('oS', name, 'Python Nigeria')}
+//               >
+//                 {name}
+//               </button>
+//             ))}
+//           </div>
+//         </>
+//       ) : (
+//         <div className="animate__animated animate__zoomIn">
+//           {quizAnswers.oS === 'Windows' ? (
+//             <>
+//               <div className="mb-4" style={{fontSize: '6rem'}}>🎊</div>
+//               <h2 className="fs-2 mb-3">Windows!</h2>
+//               <p className="fs-4"> You’re officially a legend 🏆</p>
+//             </>
+//           ) : (
+//             <>
+//               <div className="mb-4" style={{fontSize: '6rem'}}> 🥺🥺 </div>
+//               <h2 className="fs-2 mb-3">Linux!</h2>
+//               <p className="fs-4">Poor soul<strong></strong></p>
+//               <p className="fs-6 opacity-75 mt-3">May God lead you to the right path ! 😊</p>
+//             </>
+//           )}
+//         </div>
+//       )}
+//     </div>
+//   )
+// },
 
 		// NEW: Community Comparison
 		{
@@ -516,8 +646,8 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			gradient: 'linear-gradient(135deg, #f857a6 0%, #ff5858 100%)',
 			content: (
 				<div className="text-center text-white">
-					<h2 className="fs-3 mb-3  mt-5">
-					  <br /> Your Communication Style</h2>
+					<h2 className="fs-3">
+					  Your Communication Style</h2>
 					<div className="row g-4">
 						<div className="col-12">
 							<div className="bg-white bg-opacity-25 rounded-4 p-4">
@@ -603,8 +733,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			gradient: 'linear-gradient(135deg, #ee0979 0%, #ff6a00 100%)',
 			content: (
 				<div className="text-center text-white">
-					<br />
-					<h2 className="fs-2 mb-3 mt-5 pt-3 animate__animated animate__fadeInDown text-warning">Your Special Roles! 🎭</h2>
+					<h2 className="fs-2 mb-3 animate__animated animate__fadeInDown text-warning">Your Special Roles! 🎭</h2>
 					{stats.user_roles && stats.user_roles.length > 0 ? (
 						<div className="d-flex flex-column gap-3 justify-content-left">
 							{stats.user_roles.slice(0, 4).map((role, idx) => (
@@ -657,7 +786,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 		{
   gradient: 'linear-gradient(135deg, #ee0979 0%, #ff6a00 100%)',
   content: (
-    <div className="text-center text-white">
+    <div className="text-center text-white" style={{zIndex:'20000000'}}>
       {!showQuizResult.mostActive ? (
         <>
           <h2 className="fs-3 mb-4">Quick Quiz! 🤔</h2>
@@ -666,7 +795,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
             {['Ebulamicheal', 'Ada Ihueze', 'New Genesis', 'Mario Caleb',"Chukwuebuka"].map((name, idx) => (
               <button 
                 key={idx}
-                className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
+                className="btn btn-lg btn-light rounded-pill p-2 animate__animated animate__fadeInUp"
                 style={{animationDelay: `${idx * 0.1}s`}}
                 onClick={() => handleQuizAnswer('mostActive', name, 'New Genesis')}
               >
@@ -696,25 +825,18 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
   )
 },
 
-		// NEW: Top Members Leaderboard
-		{
-			gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+		// NEW: Top Members Leaderboard{
+		{	gradient: 'linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%)',
 			content: (
 				<div className="text-center text-white">
 					<h2 className="fs-3 mb-4">
 						Group Champions 👑
 					</h2>
 					<p className="fs-6 opacity-75 mb-4">
-						The most active members of 2024
+						The most active members of 2025
 					</p>
 					<div className="d-flex flex-column gap-3">
-						{[
-  { name: "New Genesis", message: "3705", userName: "09152307875" },
-  { name: "Chukwuebuka", message: "3608", userName: "08073194769" },
-  { name: "Ada Ihueze", message: "3404", userName: "Ada Ihueze" },
-  { name: "Mario Caleb", message: "1869", userName: "07059822507" },
-  { name: "Loulou🙄", message: "1809", userName: "Loulou🙄" }
-].map((member, idx) => (
+						{yearInfo.community?.top_members?.slice(0, 10).map((member, idx) => (
 							<div 
 								key={idx} 
 								className="bg-white bg-opacity-25 rounded-4 p-3"
@@ -728,8 +850,8 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 											{idx > 2 && `${idx + 1}.`}
 										</div>
 										<div className="text-start">
-											<div className="fw-bold">{member.userName === userName ? 'You! 🎉' : member.name}</div>
-											<div className="fs-6 opacity-75">{member.message} messages</div>
+											<div className="fw-bold">{member.name === userName ? 'You! 🎉' : member.username}</div>
+											<div className="fs-6 opacity-75">{member.messages.toLocaleString()} messages</div>
 										</div>
 									</div>
 									{member.name === userName && (
@@ -742,6 +864,8 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 				</div>
 			)
 		},
+
+
 
 		// Activity Level
 		{
@@ -770,59 +894,71 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			)
 		},
 		
-		{
-  gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-  content: (
-    <div className="text-center text-white">
-      {!showQuizResult.groupName ? (
-        <>
-          <h2 className="fs-3 mb-4">Final Quiz! 🧠</h2>
-          <p className="fs-4 mb-5">What was Python 9ja previously called?</p>
-          <div className="d-flex flex-column gap-3">
-            {['Python Nigeria', 'Naija Python', 'Python Devs NG', '9ja Coders'].map((name, idx) => (
-              <button 
-                key={idx}
-                className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
-                style={{animationDelay: `${idx * 0.1}s`}}
-                onClick={() => handleQuizAnswer('groupName', name, 'Python Nigeria')}
-              >
-                {name}
-              </button>
-            ))}
-          </div>
-        </>
-      ) : (
-        <div className="animate__animated animate__zoomIn">
-          {quizAnswers.groupName === 'Python Nigeria' ? (
-            <>
-              <div className="mb-4" style={{fontSize: '6rem'}}>🎊</div>
-              <h2 className="fs-2 mb-3">Perfect!</h2>
-              <p className="fs-4">You've been here since the beginning! 🏆</p>
-            </>
-          ) : (
-            <>
-              <div className="mb-4" style={{fontSize: '6rem'}}>📚</div>
-              <h2 className="fs-2 mb-3">Oops!</h2>
-              <p className="fs-4">It was <strong>Python Nigeria</strong></p>
-              <p className="fs-6 opacity-75 mt-3">Now you know! 😊</p>
-            </>
-          )}
-        </div>
-      )}
-    </div>
-  )
-},
-
+// 		{
+//   gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+//   content: (
+//     <div className="text-center text-white">
+//       {!showQuizResult.groupName ? (
+//         <>
+//           <h2 className="fs-3 mb-4">Final Quiz! 🧠</h2>
+//           <p className="fs-4 mb-5">What was Python 9ja previously called?</p>
+//           <div className="d-flex flex-column gap-3">
+//             {['Python Nigeria', 'Naija Python', 'Python Devs NG', '9ja Coders'].map((name, idx) => (
+//               <button 
+//                 key={idx}
+//                 className="btn btn-lg btn-light rounded-pill py-3 animate__animated animate__fadeInUp"
+//                 style={{animationDelay: `${idx * 0.1}s`}}
+//                 onClick={() => handleQuizAnswer('groupName', name, 'Python Nigeria')}
+//               >
+//                 {name}
+//               </button>
+//             ))}
+//           </div>
+//         </>
+//       ) : (
+//         <div className="animate__animated animate__zoomIn">
+//           {quizAnswers.groupName === 'Python Nigeria' ? (
+//             <>
+//               <div className="mb-4" style={{fontSize: '6rem'}}>🎊</div>
+//               <h2 className="fs-2 mb-3">Perfect!</h2>
+//               <p className="fs-4">You've been here since the beginning! 🏆</p>
+//             </>
+//           ) : (
+//             <>
+//               <div className="mb-4" style={{fontSize: '6rem'}}>📚</div>
+//               <h2 className="fs-2 mb-3">Oops!</h2>
+//               <p className="fs-4">It was <strong>Python Nigeria</strong></p>
+//               <p className="fs-6 opacity-75 mt-3">Now you know! 😊</p>
+//             </>
+//           )}
+//         </div>
+//       )}
+//     </div>
+//   )
+// },
+    		{
+			gradient: 'linear-gradient(135deg, #00c6ff 0%, #0072ff 100%)',
+			content: (
+				<div className="text-center text-white">
+					<h1 className="display-4 fw-bold mb-4">
+						Thanks for Being Here !!!
+					</h1>
+					<p className="fs-3 mb-5 animate__animated animate__fadeInUp animate__delay-1s">
+						Communities are built by people who show up
+					</p>
+				</div>
+			)
+		},
 		// Closing page
 		{
 			gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
 			content: (
 				<div className="text-center text-white">
 					<h1 className="display-4 fw-bold mb-4 animate__animated animate__jackInTheBox">
-						That was your 2024! ✨
+						That was your 2025! ✨
 					</h1>
 					<p className="fs-3 mb-5 animate__animated animate__fadeInUp animate__delay-1s">
-						Here's to an even better 2025! 🥂
+						Here's to an even better 2026! 🥂
 					</p>
 					<button 
 						className="btn btn-light btn-lg rounded-pill px-5 py-3 animate__animated animate__pulse animate__delay-2s animate__infinite"
@@ -843,37 +979,32 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 				zIndex: 9999,
 				transition: 'background 0.5s ease',overflow:'auto'
 			}}
-		>
-			{/* Progress bar */}
-			<div className="position-absolute top-0 start-0 w-100 p-3">
-				<div className="d-flex gap-1">
-					{pages.map((_, idx) => (
-						<div 
-							key={idx}
-							className="flex-fill bg-white bg-opacity-25 rounded-pill"
-							style={{height: '4px'}}
-						>
-							{idx === currentPage && (
-								<div 
-									className="bg-white rounded-pill h-100"
-									style={{width: `${progress}%`, transition: 'width 0.1s linear'}}
-								/>
-							)}
-							{idx < currentPage && (
-								<div className="bg-white rounded-pill h-100 w-100" />
-							)}
-						</div>
-					))}
-				</div>
-			</div>
+		>{/* Progress bar */}
+<div className="position-absolute top-0 start-0 w-100 p-3">
+  <div className="d-flex gap-1">
+    {pages.map((_, idx) => (
+      <div 
+        key={idx}
+        className={`flex-fill rounded-pill transition ${
+          idx <= currentPage ? 'bg-white' : 'bg-white bg-opacity-25'
+        }`}
+        style={{height: '4px', transition: 'all 0.3s ease'}}
+      />
+    ))}
+  </div>
+  <div className="text-center text-white mt-2 fs-6 opacity-75 hide">
+    {currentPage + 1} / {pages.length}
+  </div>
+</div>
+
 
 			{/* User name */}
-			<div className="position-absolue top-0 start-0 w-100 text-center pt-5 mt-4">
-				<h3 className="text-white fw-bold animate__animated animate__fadeIn">{userName}</h3>
+			<div className="top-0 start-0 w-100 text-center pt-5 mt-2">
+				<h3 className="text-white fw-bold">{userName}</h3>
 			</div>
 
 			{/* Content - KEY PROP FORCES RE-RENDER AND RESTARTS ANIMATIONS */}
-			<div key={currentPage} className="flex-grow-1 d-flex align-items-center justify-content-center p-4">
+			<div key={currentPage} className="flex-grow-1 d-flex align-items-center justify-content-center p-3">
 				<div className="container">
 					<div className="row justify-content-center">
 						<div className="col-12 col-md-8 col-lg-6">
@@ -884,10 +1015,10 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			</div>
 
 			{/* Navigation */}
-			<div className="position-absolute bottom-0 start-0 w-100 p-4">
+			<div className="position-fixed bottom-0 start-0 w-100 p-4">
 				<div className="d-flex justify-content-between">
 					<button 
-						className="btn btn-light rounded-circle"
+						className="button color-bg-white-focus color-s-focus rounded-circle"
 						style={{width: '60px', height: '60px'}}
 						onClick={prevPage}
 						disabled={currentPage === 0}
@@ -895,7 +1026,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 						<i className="fas fa-arrow-left"></i>
 					</button>
 					<button 
-						className="btn btn-light rounded-circle"
+						className="button color-bg-white-focus color-s-focus rounded-circle"
 						style={{width: '60px', height: '60px'}}
 						onClick={nextPage}
 						disabled={currentPage === pages.length - 1}

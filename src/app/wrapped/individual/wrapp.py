@@ -557,7 +557,7 @@ def analyze_messages(messages):
 # --------------------------
 # EXPORT JSON
 # --------------------------
-def export_json(data, filename='wrap.json'):
+def export_json(data, filename='wrap2.json'):
     print(f"Exporting to {filename}...")
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
@@ -571,7 +571,7 @@ if __name__ == "__main__":
     messages = []
     
     print("Reading file...")
-    with open("whatsapp.txt", 'r', encoding='utf-8') as f:
+    with open("whatsapp2.txt", 'r', encoding='utf-8') as f:
         for i, line in enumerate(f, 1):
             if i % 10000 == 0:
                 print(f"Read {i} lines...")
