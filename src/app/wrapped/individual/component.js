@@ -9,86 +9,256 @@ export default function InputWrapp(){
 	const [error, setError] = useState("")
 	const nameRef = useRef()
 	
+
+const trackWrapView = async (userName) => {
+  try {
+    // Get current view count for this user
+    const existingData = await window.storage.get(`wrap_views:${userName}`, false)
+    
+    let viewCount = 1
+    let viewHistory = [new Date().toISOString()]
+    
+    if (existingData) {
+      const parsed = JSON.parse(existingData.value)
+      viewCount = (parsed.count || 0) + 1
+      viewHistory = [...(parsed.history || []), new Date().toISOString()]
+    }
+    
+    // Save updated count
+    await window.storage.set(
+      `wrap_views:${userName}`, 
+      JSON.stringify({
+        count: viewCount,
+        history: viewHistory,
+        lastViewed: new Date().toISOString()
+      }),
+      false
+    )
+    
+    // Track total community views (shared)
+    const totalViews = await window.storage.get('wrap_total_views', true)
+    const currentTotal = totalViews ? parseInt(totalViews.value) : 0
+    await window.storage.set('wrap_total_views', (currentTotal + 1).toString(), true)
+    
+  } catch (error) {
+    console.error('Tracking error:', error)
+  }
+}
+
+// Update handleGetWrapped
+const handleGetWrapped = async () => {
+  setLoading(true)
+  setError("")
   
-	const handleGetWrapped = async () => {
-		setLoading(true)
-		setError("")
-		
-		try {
-			// Fetch the JSON file
-			const response = await fetch('/wrap.json')
-			const data = await response.json()
-			
-			const userName = nameRef.current.value.trim()
-			
-			// Check if user exists in individual data
-			if (data.individual && data.individual[userName]) {
-				setWrapData({
-					user: userName,
-					stats: data.individual[userName],
-					yearInfo: data.year_info
-				})
-				setShow(true)
-			} else {
-				setError("User not found in wrap data. Please check the number and try again.")
-			}
-		} catch (err) {
-			setError("Failed to load wrap data. Make sure wrap.json is in the public folder.")
-			console.error(err)
-		} finally {
-			setLoading(false)
-		}
-	}
+  try {
+    const response = await fetch('/wrap.json')
+    const data = await response.json()
+    
+    const userName = nameRef.current.value.trim()
+    
+    if (data.individual && data.individual[userName]) {
+      // Track the view BEFORE showing wrap
+      await trackWrapView(userName)
+      
+      setWrapData({
+        user: userName,
+        stats: data.individual[userName],
+        yearInfo: data.year_info
+      })
+      setShow(true)
+    } else {
+      setError("User not found in wrap data. Please check the number and try again.")
+    }
+  } catch (err) {
+    setError("Failed to load wrap data. Make sure wrap.json is in the public folder.")
+    console.error(err)
+  } finally {
+    setLoading(false)
+  }
+}
+
 
 	if (show && wrapData){
 		return <IndividualWrap data={wrapData} onBack={() => setShow(false)} />
 	}
 
 	return(
-			<div className="container">
-				<div className="row justify-content-center">
-					<div className="col-12 col-md-6">
-						<div className="shadow-lg border-0 rounded-4">
-							<div className="p-2">
-								<p className="text-center text-mute mb-4 color-grey sz-14">
-									Please remove space from number
-								</p>
-								
-								<input 
-									ref={nameRef} 
-									type="text" 
-									className="form-control form-control-lg mb-3 w-100 rounded-3"
-									placeholder="Your whatsapp Number"
-									style={{fontSize: '1.2rem'}}
-								/>
-								
-								{error && (
-									<div className="alert alert-danger rounded-3" role="alert">
-										{error}
-									</div>
-								)}
-								
-								<button 
-									className="bt btn-lg w-100 text-white fw-bold no-border rounded-3 py-3 color-bg-s"
-									style={{backgroud: 'linear-gradient(to bottom, #013220, #004d1a)'}}
-									onClick={handleGetWrapped}
-									disabled={loading}
-								>
-									{loading ? (
-										<>
-											<span className="spinner-border spinner-border-sm me-2"></span>
-											Loading...
-										</>
-									) : (
-										'Get My Wrapped 🚀'
-									)}
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	)
+	  <>
+      <div className="wrap-page">
+        <div className="containe">
+          <div className="row min-vh-100 align-items-center justify-content-center py-5">
+            <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+              
+              {/* Header */}
+              <header className="text-center mb-5 wrap-header">
+                <div className="d-inline-flex align-items-center gap-3 mb-4">
+                  <span className="wrap-emoji display-1">🎉</span>
+                  <div className="text-start">
+                    <div className="sz-48 fw-bold text-warning">2025</div>
+                    <div className="display-6 fw-light text-whie-50">Wrapped</div>
+                  </div>
+                </div>
+              </header>
+
+              {/* Card */}
+              <div className="card wrap-card shadow-lg border-0">
+                <div className="card-body p-4 p-md-5">
+                  <p className="text-center mb-4 wrap-hin">
+                    Enter your WhatsApp number without spaces
+                  </p>
+
+                  <div className="mb-4">
+                    <input
+                      ref={nameRef}
+                      type="text"
+                      className="form-control form-control-lg text-center wrap-inpu rounded-3 sz-14"
+                      placeholder="WhatsApp number"
+                      onChange={() => setError('')}
+                    />
+                  </div>
+
+                  {error && (
+                    <div className="alert alert-danger wrap-error" role="alert">
+                      {error}
+                    </div>
+                  )}
+
+                  <button
+                    className="btn btn-lg w-100 wrap-button"
+                    onClick={handleGetWrapped}
+                    disabled={loading}
+                  >
+                    {loading ? (
+                      <>
+                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        <span>Loading…</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Get My Wrapped</span>
+                        <span className="ms-2">🚀</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="text-center mt-4 text-white-50 small">
+                Discover your year in moments
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .wrap-page {
+            backgroud: linear-gradient(135deg, #1a3a1a 0%, #7cb342 50%, #1a3a1a 100%);
+          min-height: 100vh;
+        }
+
+        .wrap-header {
+          animation: fadeIn 0.8s ease-out;
+        }
+
+        .wrap-emoji {
+          animation: bounce 2s ease-in-out infinite;
+        }
+
+        .wrap-card {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(20px);
+          border-radius: 1.5rem !important;
+          border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .wrap-hint {
+          color: rgba(233, 213, 255, 0.9);
+          font-size: 0.95rem;
+          font-weight: 300;
+          letter-spacing: 0.5px;
+        }
+
+        .wrap-input {
+          background: rgba(255, 255, 255, 0.05) !important;
+          border: 2px solid rgba(255, 255, 255, 0.2) !important;
+          border-radius: 1rem !important;
+          color: white !important;
+          font-size: 1.1rem;
+          padding: 0.875rem 1.5rem;
+          transition: all 0.3s ease;
+        }
+
+        .wrap-input::placeholder {
+          color: rgba(216, 180, 254, 0.5);
+        }
+
+        .wrap-input:focus {
+          background: rgba(255, 255, 255, 0.08) !important;
+          border-color: rgba(168, 85, 247, 0.6) !important;
+          box-shadow: 0 0 0 0.25rem rgba(168, 85, 247, 0.25) !important;
+          color: white !important;
+        }
+
+        .wrap-error {
+          background: rgba(220, 38, 38, 0.2);
+          border: 1px solid rgba(239, 68, 68, 0.5);
+          color: #fecaca;
+          border-radius: 0.75rem;
+          animation: shake 0.3s ease-in-out;
+        }
+
+        .wrap-button {
+          background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+          border: none;
+          border-radius: 1rem !important;
+          color: white;
+          font-weight: 600;
+          padding: 0.875rem 1.5rem;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .wrap-button:hover:not(:disabled) {
+          background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .wrap-button:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-8px); }
+          75% { transform: translateX(8px); }
+        }
+      `}</style>
+      </>
+    )
 }
 
 function IndividualWrap({data, onBack}){
@@ -210,14 +380,14 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
 			content: (
 				<div className="text-center text-white">
 					<h1 className="disply-5 sz-30 fw-bold mb-2">
-					  Before we proceed,
+					  Python 9ja 2025 recap ,
 					  <br /> 
 					  <br />
 					  <img src="/logo.svg" class="img-fluid" style={{height:'100px',width:'auto'}}/> <br />
 						
 					</h1>
 					<p className="fs-5 mt-2">
-					Let talk about our community 😎😎
+					Let check the raw output of our community this year 😎😎
 					</p>
 				</div>
 			)
@@ -797,7 +967,7 @@ const handleQuizAnswer = (quizType, answer, correctAnswer) => {
           <h2 className="fs-3 mb-4">Quick Quiz! 🤔</h2>
           <p className="fs-4 mb-5">Who do you think was the most active member this year?</p>
           <div className="d-flex flex-column gap-3">
-            {['Ebulamicheal', 'Ada Ihueze', 'New Genesis', 'Mario Caleb',"Chukwuebuka"].map((name, idx) => (
+            {['Ada Ihueze', 'New Genesis', 'Mario Caleb',"Chukwuebuka"].map((name, idx) => (
               <button 
                 key={idx}
                 className="btn btn-lg btn-light rounded-pill p-2 animate__animated animate__fadeInUp"

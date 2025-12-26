@@ -6,6 +6,7 @@ import "./css/animate.min.css";
 import "./globals.css";
 import Nav from "./nav.js"
 import PopUp from "./pop.js"
+import "./storage.js"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <Nav />
       {children}
+      <div class="d-none hide">
       <Footer />
+      </div>
       </body>
     </html>
   );
