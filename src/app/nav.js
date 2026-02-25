@@ -1,64 +1,69 @@
 "use client"
-import React from "react";
 import { useRouter ,useSearchParams,usePathname } from 'next/navigation'
 import Link from "next/link"
+import React, { useState, useEffect } from "react";
 
 export default function Nav(){
 	const path = usePathname()
-	const excludedPath= ["/account/signup"]
-	const [isScrolled,setIsScrolled]= React.useState(false)
-	const [dropdown , showDrop] = React.useState(false)
-	const animateClass = `${isScrolled ? "color-bg-white color-black shadow-sm" : "color-bg-white color-black"}`
+	const excludedPath= ["/account/signup","/account/signin"]
+	const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-	React.useEffect(()=>{
-		const handleScroll = () =>{
-			if (window.scrollY > 50){
-				setIsScrolled(true);
-			}
-			else{
-				setIsScrolled(false)
-			}
-		}
-		window.addEventListener('scroll',handleScroll,{passive:true})
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-		return ()=> window.removeEventListener('scroll',handleScroll)
-	},[])
+	
 
 	if(excludedPath.includes(path)){
 		return(<></>)
 	}
 
 	return(
-		<nav id="nav" class={`container-fluid sz-14 sticky-top p-4 py-3 py-md-3 ${path === "/" ? animateClass : "color-bg-white color-black shadow-sm" } ease`} style={{zIndex:'20'}} >
-        <div class="row align-items-center">
-          <div class="col col-md-6 p-2 sz-16 bold">
-          <div class="row align-items-center">
-          <div class="col-1 col-md-1  p-0">
-            <img src="/logo.svg" class="img-fluid" style={{height:'25px',width:'auto'}}/> </div>
-            <div class="col p-1">Python 9ja </div>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"}`}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2">
+            <img src="/logo.svg" className="w-8 h-8 green-gradiet rouded-lg flex items-center justify-center text-white font-bold text-sm"/>
+         
+            <span className="font-display font-bold text-lg text-green-800">Python<span className="text-green-500">9ja</span></span>
+             </Link>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-7 text-sm font-medium text-gray-600">
+            <a href="#about" className="nav-link hover:text-green-700 transition-colors">About</a>
+            <a href="#community" className="nav-link hover:text-green-700 transition-colors">Community</a>
+            <Link href="/jobs" className="nav-link hover:text-green-700 transition-colors">Jobs</Link>
+            <Link href="/news" className="nav-link hover:text-green-700 transition-colors">Tech News</Link>
+            <Link href="/account/signin" className="px-4 py-2 rounded-lg border border-green-600 text-green-700 hover:bg-green-50 transition-colors text-sm font-semibold">Sign In</Link>
+            <Link href="/account/signup" className="px-4 py-2 rounded-lg green-gradient text-white hover:opacity-90 transition-opacity text-sm font-semibold shadow-sm">Join Free</Link>
           </div>
-          </div>
-          <div class="col font-poppins p-4 right display-sm-none"> 
-            <Link href="/membership" class="no-decoration"> Membership </Link> 
-          </div>
-          <div class="col font-poppins p-4 right display-sm-none">
-            <Link href="/job" class="no-decoration">Jobs</Link>
-          </div>
-          <div class="col font-poppins p-4 right display-sm-none">
-            Forums
-          </div>
-          <div class="col font-poppins p-4 right display-sm-none">
-            Resorces
-          </div>
-          <div class="col font-poppins p-4 right display-sm-none color-white">
-            <Link class="color-bg-p color-white no-decoration p-2 rounded" href="/"> Join Us </Link>
-          </div>
-          <div class="col-2 d-md-none right sz-20">
-          	{!dropdown && <span onClick={()=>showDrop(true)}> <i class="fas fa-ellipsis-v font-montserrat-bold color-p"></i><i class="fas fa-ellipsis-v font-montserrat-bold color-p"></i><i class="fas fa-ellipsis-v font-montserrat-bold color-p"></i> </span>}
-          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button className="md:hidden text-gray-700" onClick={() => setMenuOpen(!menuOpen)}>
+            <div className={`w-5 h-0.5 bg-current mb-1 transition-all ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`}></div>
+            <div className={`w-5 h-0.5 bg-current mb-1 transition-all ${menuOpen ? "opacity-0" : ""}`}></div>
+            <div className={`w-5 h-0.5 bg-current transition-all ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`}></div>
+          </button>
         </div>
-        {dropdown && <Dropdown close={()=>showDrop(false)} /> }
-        </nav>
+
+        {/* Mobile Dropdown */}
+        {menuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-3 text-sm">
+            <a href="#about" className="text-gray-700 hover:text-green-700 py-1" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#community" className="text-gray-700 hover:text-green-700 py-1" onClick={() => setMenuOpen(false)}>Community</a>
+            <Link href="/jobs" className="text-gray-700 hover:text-green-700 py-1">Jobs</Link>
+            <Link href="/news" className="text-gray-700 hover:text-green-700 py-1">Tech News</Link>
+            <div className="flex gap-3 pt-2">
+              <Link href="/account/signin" className="flex-1 text-center py-2 rounded-lg border border-green-600 text-green-700 font-semibold">Sign In</Link>
+              <Link href="/account/signup" className="flex-1 text-center py-2 rounded-lg green-gradient text-white font-semibold">Join Free</Link>
+            </div>
+          </div>
+        )}
+      </nav>
+	
 		)
 }
 
