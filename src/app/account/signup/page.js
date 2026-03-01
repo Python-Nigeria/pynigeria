@@ -5,7 +5,7 @@ import Link from "next/link";
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function getCsrfToken() {
-  const res = await fetch(`${API_BASE}/api/auth/csrfToken/`, {
+  const res = await fetch(`${API_BASE}/api/v1/authentication/csrfToken/`, {
     credentials: "include",
   });
   const data = await res.json();
@@ -81,7 +81,7 @@ export default function SignUpPage() {
         username: form.username,
       };
 
-      const res = await fetch(`${API_BASE}/api/auth/register/`, {
+      const res = await fetch(`${API_BASE}/api/v1/authentication/register/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -143,57 +143,49 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen flex font-sans">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Clash+Display:wght@600;700&display=swap');
-        * { font-family: 'DM Sans', sans-serif; }
-        .font-display { font-family: 'Clash Display', 'DM Sans', sans-serif; }
-        .green-gradient { background: linear-gradient(135deg, #065f46 0%, #059669 60%, #34d399 100%); }
-        .input-focus:focus { outline: none; border-color: #059669; box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12); }
-        .btn-green { background: linear-gradient(135deg, #065f46, #059669); transition: all 0.2s ease; }
-        .btn-green:hover { transform: translateY(-1px); box-shadow: 0 8px 25px rgba(5, 150, 105, 0.35); }
-        .btn-green:disabled { transform: none; box-shadow: none; }
-        .fade-up { animation: fadeUp 0.5s ease forwards; }
-        @keyframes fadeUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
-        .panel-left { background: linear-gradient(160deg, #022c22 0%, #064e3b 50%, #065f46 100%); }
-        .pattern-dots { background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 24px 24px; }
-        .social-btn { transition: all 0.2s ease; border: 1.5px solid #e5e7eb; }
-        .social-btn:hover { border-color: #059669; background: #f0fdf4; transform: translateY(-1px); }
-        .step-active { background: linear-gradient(135deg, #065f46, #059669); color: white; }
-        .step-done { background: #d1fae5; color: #065f46; }
-        .step-idle { background: #f3f4f6; color: #9ca3af; }
-        .slide-in { animation: slideIn 0.35s ease forwards; }
-        @keyframes slideIn { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
-        .error-text { color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem; }
-        .input-error { border-color: #fca5a5 !important; background: #fff5f5; }
-      `}</style>
 
       {/* ── Left panel ── */}
       <div className="hidden lg:flex lg:w-5/12 panel-left pattern-dots flex-col justify-between p-12 relative overflow-hidden">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-emerald-500/20 blur-3xl pointer-events-none" />
 
-        <Link href="/" className="flex items-center gap-3 z-10">
-          <div className="w-10 h-10 green-gradient rounded-xl flex items-center justify-center text-white font-bold shadow-lg">Py</div>
-          <span className="font-display text-xl text-white">Python<span className="text-emerald-400">9ja</span></span>
-        </Link>
+        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <img
+              src="/logo.svg"
+              alt="Python 9ja"
+              className="w-8 h-8 rounded-lg"
+              onError={(e) => {
+                e.target.style.display = "none";
+                e.target.nextSibling.style.display = "flex";
+              }}
+            />
+            <div
+              style={{ display: "none" }}
+              className="w-8 h-8 green-gradient rounded-lg items-center justify-center text-white font-bold text-sm"
+            >
+              Py
+            </div>
+            <span className={`font-display font-bold text-lg text-green-800 `}>
+              Python<span className="text-green-500">9ja</span>
+            </span>
+          </Link>
 
         <div className="z-10 space-y-6">
           <div className="text-5xl">🚀</div>
-          <h2 className="font-display text-4xl text-white leading-tight">
+          <h2 className="font-display text-4xl text-black leading-tight">
             Start your journey with <br />
-            <span className="text-emerald-400">Nigeria's Python family</span>
+            <span className="text-emerald-600">Nigeria's Python family</span>
           </h2>
-          <p className="text-emerald-200/70 text-base leading-relaxed max-w-xs">
+          <p className="text-grey-200/70 text-base leading-relaxed max-w-xs">
             Join a growing community of developers, get access to job listings, tech news, projects, and mentorship.
           </p>
 
-          {/* Perks */}
           {[
             "✅ Access to 120+ Python job listings",
             "✅ Weekly curated tech news",
             "✅ Connect with 2,400+ developers",
             "✅ Project collabs & mentorship",
           ].map((p) => (
-            <div key={p} className="text-emerald-200 text-sm font-medium">{p}</div>
+            <div key={p} className="text-black text-sm font-medium">{p}</div>
           ))}
         </div>
 

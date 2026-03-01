@@ -98,7 +98,7 @@ export default function Nav() {
             >
               Py
             </div>
-            <span className={`font-display font-bold text-lg ${solidBg ? "text-green-800" : "text-white"}`}>
+            <span className={`font-display font-bold text-lg text-green-800 `}>
               Python<span className="text-green-500">9ja</span>
             </span>
           </Link>
@@ -115,8 +115,8 @@ export default function Nav() {
                     active
                       ? "text-green-700 font-semibold"
                       : solidBg
-                        ? "text-gray-600 hover:text-green-700"
-                        : "text-white/80 hover:text-white"
+                        ? "text-green-600 hover:text-green-700"
+                        : "text-black/80 hover:text-green"
                   }`}
                 >
                   {label}
@@ -168,7 +168,7 @@ export default function Nav() {
                   className={`px-4 py-2 rounded-lg border text-sm font-semibold transition-colors ${
                     solidBg
                       ? "border-green-600 text-green-700 hover:bg-green-50"
-                      : "border-white/50 text-white hover:bg-white/10"
+                      : "border-green-600 text-green-700 hover:bg-green-50"
                   }`}
                 >
                   Sign In

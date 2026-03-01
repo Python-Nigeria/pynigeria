@@ -62,9 +62,9 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                 Nigeria's #1 Python Community
               </div>
-              <h2 className="font-display text-3xl md:text-6xl leading-tight text-gray-900 mb-4"> Welcome to
+              <h2 className="font-display text-3xl md:text-5xl  leading-tight text-gray-900 mb-4"> Welcome to
                  <br />
-                <span className="shine text-5xl">Python 9ja</span>
+                <span className="shine text-5xl md:text-6xl bold">Python 9ja</span>
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed mb-8 max-w-md">
                 A space for Python enthusiasts across Nigeria to share knowledge, tackle real-world projects together, and grow in tech 
