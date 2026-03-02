@@ -5,7 +5,7 @@ import Link from "next/link";
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function getCsrfToken() {
-  const res = await fetch(`${API_BASE}/api/auth/csrfToken/`, {
+  const res = await fetch(`${API_BASE}/api/v1/authentication/csrfToken/`, {
     credentials: "include",
   });
   const data = await res.json();
@@ -29,7 +29,7 @@ export default function SignInPage() {
     try {
       const csrfToken = await getCsrfToken();
 
-      const res = await fetch(`${API_BASE}/api/auth/login/`, {
+      const res = await fetch(`${API_BASE}/api/v1/authentication/login/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,31 +70,6 @@ export default function SignInPage() {
 
   return (
     <div className="min-h-screen flex font-sans">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Clash+Display:wght@600;700&display=swap');
-        * { font-family: 'DM Sans', sans-serif; }
-        .font-display { font-family: 'Clash Display', 'DM Sans', sans-serif; }
-        .green-gradient { background: linear-gradient(135deg, #065f46 0%, #059669 60%, #34d399 100%); }
-        .green-glow { box-shadow: 0 0 40px rgba(5, 150, 105, 0.3); }
-        .input-focus:focus { outline: none; border-color: #059669; box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12); }
-        .btn-green { background: linear-gradient(135deg, #065f46, #059669); transition: all 0.2s ease; }
-        .btn-green:hover { transform: translateY(-1px); box-shadow: 0 8px 25px rgba(5, 150, 105, 0.35); }
-        .btn-green:active { transform: translateY(0); }
-        .fade-up { animation: fadeUp 0.6s ease forwards; }
-        @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
-        .panel-left {
-          background: linear-gradient(160deg, #022c22 0%, #064e3b 50%, #065f46 100%);
-        }
-        .pattern-dots {
-          background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
-          background-size: 24px 24px;
-        }
-        .social-btn { transition: all 0.2s ease; border: 1.5px solid #e5e7eb; }
-        .social-btn:hover { border-color: #059669; background: #f0fdf4; transform: translateY(-1px); }
-        .error-shake { animation: shake 0.4s ease; }
-        @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
-      `}</style>
-
       {/* ── Left decorative panel (hidden on mobile) ── */}
       <div className="hidden lg:flex lg:w-5/12 panel-left pattern-dots flex-col justify-between p-12 relative overflow-hidden">
         {/* Glowing orb */}
@@ -109,11 +84,11 @@ export default function SignInPage() {
         {/* Center quote */}
         <div className="z-10 space-y-6">
           <div className="text-5xl">🐍</div>
-          <h2 className="font-display text-4xl text-white leading-tight">
+          <h2 className="font-display text-4xl text-black leading-tight">
             Welcome back to <br />
-            <span className="text-emerald-400">Nigeria's Python hub</span>
+            <span className="text-emerald-800 bold">Nigeria's Python hub</span>
           </h2>
-          <p className="text-emerald-200/70 text-base leading-relaxed max-w-xs">
+          <p className="text-grey-200/70 text-base leading-relaxed max-w-xs">
             Connect with thousands of Python developers, find jobs, and stay
             up‑to‑date with tech news — all in one place.
           </p>
@@ -130,14 +105,14 @@ export default function SignInPage() {
                 </div>
               ))}
             </div>
-            <span className="text-emerald-300 text-sm font-medium">
+            <span className="text-black-300 text-sm font-medium">
               2,400+ members waiting
             </span>
           </div>
         </div>
 
-        <p className="text-emerald-200/40 text-xs z-10">
-          © {new Date().getFullYear()} Python 8ja · Made in Nigeria 🇳🇬
+        <p className="text-black-200/40 text-xs z-10">
+          © {new Date().getFullYear()} Python 9ja · Made in Nigeria 🇳🇬
         </p>
       </div>
 
