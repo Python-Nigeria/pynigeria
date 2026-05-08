@@ -1,0 +1,6 @@
+{
+  "/api/v1/notifications": "/notifications",
+  "/api/v1/notifications/:id": "/notifications/:id",
+  "/api/v1/notifications/:id/read/": "/notifications/:id",
+  "/api/v1/notifications/read-all/": "/notifications"
+}

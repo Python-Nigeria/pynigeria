@@ -1,0 +1,32 @@
+{
+  "notifications": [
+    {
+      "id": 2,
+      "message": "New job posted: Senior Django Developer at Flutterwave.",
+      "type": "new_job",
+      "is_read": true,
+      "created_at": "2026-04-08T15:30:00Z"
+    },
+    {
+      "id": 3,
+      "message": "Someone commented on your post about FastAPI vs Django.",
+      "type": "post_reply",
+      "is_read": true,
+      "created_at": "2026-04-07T09:15:00Z"
+    },
+    {
+      "id": 4,
+      "message": "Python Webinar tomorrow at 3 PM. Don't miss it!",
+      "type": "event_reminder",
+      "is_read": true,
+      "created_at": "2026-04-06T12:00:00Z"
+    },
+    {
+      "id": 5,
+      "message": "Your application for 'Backend Engineer' has been shortlisted",
+      "type": "application_update",
+      "is_read": true,
+      "created_at": "2026-04-05T08:45:00Z"
+    }
+  ]
+}

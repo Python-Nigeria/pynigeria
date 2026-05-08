@@ -6,6 +6,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/lib/AuthContext";
 import Avatar from "@/components/ui/Avatar";
 import C from "@/styles/colors"
+import { FiBell } from "react-icons/fi";
+import { useNotifications } from "@/hooks/useNotifications";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -28,10 +30,14 @@ export default function Navbar() {
   const { user, isAuthenticated } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
   const router    = useRouter();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { recentNotifications, unreadCount, loading, markAsRead, markAllAsRead, deleteNotification } = useNotifications();
+
 
   if (HIDDEN_PATHS.includes(path)) return null;
 
   return (
+    <>
      <nav style={{
         position: "fixed", top: 0, width: "100%", zIndex: 50,
         background: "rgba(14,14,14,0.85)", backdropFilter: "blur(20px)",
@@ -53,7 +59,7 @@ export default function Navbar() {
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "2rem" }} className="font-headline nav-desktop-links">
             {NAV_LINKS.map((item, i) => (
-              <a key={item} href={item.href} className={i === 0 ? "nav-link-active font-headline" : "nav-link font-headline"}
+              <a key={item.href} href={item.href} className={i === 0 ? "nav-link-active font-headline" : "nav-link font-headline"}
                 style={{ fontSize: "0.8rem", fontWeight: 600, letterSpacing: "-0.02em", textTransform: "uppercase" }}>
                 {item.label}
               </a>
@@ -67,13 +73,46 @@ export default function Navbar() {
                 placeholder="CMD + K TO SEARCH"
               />
             </div>
-            {isAuthenticated ? <Avatar name={user.username} />
-             : <Link href="/login" className="nav-login-btn">
-              <button className="login-btn font-headline" style={{ padding: "0.5rem 1.5rem", fontWeight: 700, fontSize: "0.875rem", border: "none", cursor: "pointer" }}>
-                LOGIN
-              </button>
-            </Link>
-            }
+            {true ? (
+              <div style={{ position: "relative", display: "flex", alignItems: "center", gap: "1rem" }}>
+                {/* Bell Icon */}
+                <button 
+                  onClick={ () => setDropdownOpen(!dropdownOpen)}
+                  style={{ position: "relative", background: "none", border: "none", cursor: "pointer",
+                    display: "flex", alignItems: "center"
+                  }}
+                  aria-label="Notifications"
+                  >
+                    <FiBell size={20} color="white"></FiBell>
+                    {/* Unread badge */}
+                    <span style={{
+                      position: "absolute",
+                      top: "-5px",
+                      right: "-8px",
+                      background: "#ef4444",
+                      color: "white",
+                      fontSize: "10px",
+                      fontWeight: "bold",
+                      borderRadius: "50%",
+                      width: "16px",
+                      height: "16px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center"
+                    }}>
+                      {unreadCount}
+                      </span>  
+                  </button>
+
+                  <Avatar name={user?.username || "Test User"}/>
+            </div>
+            ): (
+              <Link href="/login" className="nav-login-btn">
+                <button className="login-btn font-headline" style={{ padding: "0.5rem 1.5rem", fontWeight: 700, fontSize: "0.875rem", border: "none", cursor: "pointer" }}>
+                  LOGIN
+                </button>
+              </Link>
+            )}
 
             <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span style={{ transform: menuOpen ? "rotate(45deg) translate(5px, 5px)" : "none" }} />
@@ -85,7 +124,7 @@ export default function Navbar() {
         {/* Mobile menu */}
         <div className={`nav-mobile-menu${menuOpen ? " open" : ""}`}>
           {NAV_LINKS.map((item, i) => (
-            <a key={item} href={item.href} className={i === 0 ? "nav-link-active" : "nav-link"} onClick={() => setMenuOpen(false)}>
+            <a key={item.href} href={item.href} className={i === 0 ? "nav-link-active" : "nav-link"} onClick={() => setMenuOpen(false)}>
               {item.label}
             </a>
           ))}
@@ -99,5 +138,59 @@ export default function Navbar() {
         </div>
       </nav>
 
+            {/* Notifications Dropdown */}
+      {dropdownOpen && (
+        <div style={{
+          position: "fixed",
+          top: "70px",
+          right: "20px",
+          width: "320px",
+          background: "#1a1a1a",
+          borderRadius: "12px",
+          boxShadow: "0 10px 40px rgba(0,0,0,0.3)",
+          border: "1px solid rgba(255,255,255,0.1)",
+          zIndex: 100,
+          overflow: "hidden"
+        }}>
+          <div style={{ padding: "12px 16px", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+            <h4 style={{ color: "white", margin: 0 }}>Notifications</h4>
+          </div>
+          <div style={{ padding: "16px" }}>
+          {loading ? (
+            <div style={{ textAlign: "center", color: "#888" }}>Loading...</div>
+          ) : recentNotifications.length === 0 ? (
+            <div style={{ textAlign: "center", color: "#888" }}>No notifications yet</div>
+          ) : (
+            recentNotifications.map((notification) => (
+              <div
+                key={notification.id}
+                onClick={() => markAsRead(notification.id)}
+                style={{
+                  padding: "12px",
+                  marginBottom: "8px",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                  background: notification.is_read ? "transparent" : "rgba(59, 130, 246, 0.1)",
+                  transition: "background 0.2s"
+                }}
+              >
+                <div style={{ color: "white", fontSize: "14px", marginBottom: "4px" }}>
+                  {notification.message}
+                </div>
+                <div style={{ color: "#888", fontSize: "12px" }}>
+                  {new Date(notification.created_at).toLocaleDateString()}
+                </div>
+              </div>
+            ))
+          )}
+          {recentNotifications.length > 0 && (
+            <Link href="/notifications" style={{ display: "block", textAlign: "center", padding: "12px", color: "#3b82f6", textDecoration: "none", fontSize: "14px" }}>
+              View all
+            </Link>
+          )}
+        </div>
+        </div>
+      )}
+    </>
   );
 }
